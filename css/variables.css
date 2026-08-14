@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Premium Organic Palette */
+  --color-bg: #FDFCF8; /* Ultra-soft warm white */
+  --color-surface: #FFFFFF;
+  --color-primary: #8AB292; /* Fresh sage */
+  --color-primary-dark: #648A6B;
+  --color-primary-light: #E8F0E9;
+  --color-secondary: #EEDCC1; /* Warm sandy beige */
+  --color-accent: #ECAE7E; /* Soft terracotta accent */
+  
+  --color-text-main: #2C3531; /* Deep forest green-black */
+  --color-text-muted: #6B7570;
+  --color-border: #E8E5DF;
+  --color-focus: #8AB292;
+
+  /* Premium Typography */
+  --font-family-base: 'Outfit', sans-serif;
+  --font-family-dyslexia: 'OpenDyslexic', 'Comic Sans MS', sans-serif;
+  
+  --font-size-base: 1.125rem;
+  --line-height-base: 1.6;
+  --letter-spacing-base: 0.01em;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-xxl: 7rem;
+
+  /* Soft Organic Radii */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-pill: 9999px;
+
+  /* Rich Organic Shadows */
+  --shadow-sm: 0 4px 14px rgba(138, 178, 146, 0.08);
+  --shadow-md: 0 10px 30px rgba(138, 178, 146, 0.12);
+  --shadow-hover: 0 20px 40px rgba(138, 178, 146, 0.2);
+  
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Dyslexia Mode Overrides */
+body.dyslexia-mode {
+  --font-family-base: var(--font-family-dyslexia);
+  --line-height-base: 1.8;
+  --letter-spacing-base: 0.05em;
+  --color-bg: #FFFFEB; 
+  --color-surface: #FFFDF0;
+  --color-text-main: #1A1A1A;
+}
