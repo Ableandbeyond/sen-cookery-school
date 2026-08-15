@@ -137,7 +137,7 @@ section { padding: var(--space-xxl) 0; position: relative; }
 .bio-gallery { display: flex; flex-direction: column; gap: var(--space-sm); }
 .gallery-img { width: 100%; border-radius: var(--radius-md); object-fit: cover; box-shadow: var(--shadow-sm); transition: var(--transition-smooth); }
 .gallery-img:hover { transform: scale(1.02); box-shadow: var(--shadow-hover); }
-.main-img { height: 400px; }
+.main-img { height: 450px; object-position: center 15%; }
 .gallery-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
 .gallery-row img { height: 120px; }
 
