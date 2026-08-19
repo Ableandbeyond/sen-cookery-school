@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School & Specialist Workshops - Able and Beyond</title>
+  <meta name="description" content="Tailored on-site culinary sessions for SEN schools across London.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .program-header { text-align: center; padding: var(--space-xl) 0; }
+    .program-title { font-size: 3rem; color: var(--color-primary-dark); margin-bottom: var(--space-sm); }
+    .program-container { max-width: 800px; margin: 0 auto; padding: 0 var(--space-md); }
+    
+    .pricing-box-large { background: var(--color-surface); padding: var(--space-xl); border-radius: var(--radius-lg); border: 2px solid var(--color-primary); margin-bottom: var(--space-xl); box-shadow: var(--shadow-md); }
+    .pricing-box-large h3 { margin-top: 0; color: var(--color-primary-dark); font-size: 2rem; border-bottom: 2px solid var(--color-border); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+    
+    .pricing-tier { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+    .pricing-tier:last-child { border-bottom: none; }
+    .tier-name { font-size: 1.5rem; font-weight: 700; color: var(--color-text-main); }
+    .tier-price { font-size: 1.8rem; font-weight: 700; color: var(--color-accent); }
+    
+    .feature-list-large { list-style: none; padding: 0; margin: var(--space-xl) 0; }
+    .feature-list-large li { position: relative; padding-left: 2.5rem; margin-bottom: 1rem; font-size: 1.2rem; color: var(--color-text-main); line-height: 1.6; }
+    .feature-list-large li::before { content: "✓"; position: absolute; left: 0; top: -2px; color: var(--color-primary); font-weight: bold; font-size: 1.5rem; }
+    
+    .btn-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: var(--space-lg); text-decoration: none; color: var(--color-text-main); font-weight: 600; font-size: 1.1rem; }
+    .btn-back:hover { color: var(--color-primary); }
+    
+    @media (max-width: 600px) {
+      .pricing-tier { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  
+  <header style="padding: var(--space-md) 0; background: var(--color-surface); box-shadow: var(--shadow-sm);">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);">
+          <path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        Able and Beyond
+      </a>
+    </div>
+  </header>
+
+  <main style="padding-bottom: var(--space-xl);">
+    <div class="container">
+      <div class="program-header">
+        <a href="index.html#programs" class="btn-back">⬅️ Back to Programs</a>
+        <h1 class="program-title">School & Specialist Workshops</h1>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Tailored on-site culinary sessions designed for SEN schools, alternative provision, and specialist resource bases across London.</p>
+        <img src="assets/images/class-3.jpg" alt="School & Specialist Workshops" style="width: 100%; max-width: 800px; border-radius: var(--radius-lg); margin-top: var(--space-lg); box-shadow: var(--shadow-md);">
+      </div>
+
+      <div class="program-container">
+        
+        <div class="pricing-box-large">
+          <h3>Pricing Options</h3>
+          
+          <div class="pricing-tier">
+            <div class="tier-name">Session Rate</div>
+            <div class="tier-price">From £150 <span style="font-size:1rem; color: var(--color-text-muted); font-weight:normal;">/ 2-hr workshop</span></div>
+          </div>
+          
+        </div>
+
+        <h3 style="font-size: 2rem; color: var(--color-primary-dark);">What's Included?</h3>
+        <ul class="feature-list-large">
+          <li>Delivered by a qualified SEN teacher & professional chef.</li>
+          <li>Custom recipe plan completely adapted to your school's kitchen setup.</li>
+          <li>Full risk assessment & strict dietary adaptation included as standard.</li>
+          <li>Led by an Enhanced DBS checked, Food Hygiene Level 3 certified specialist.</li>
+        </ul>
+        
+        <div style="text-align: center; margin-top: var(--space-xl);">
+          <a href="index.html#contact" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 3rem;">Enquire for Your School</a>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Able and Beyond. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
