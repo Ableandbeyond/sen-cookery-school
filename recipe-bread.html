@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anna's Easy Bread - Visual Recipe Hub</title>
+  <meta name="description" content="Step-by-step visual recipe for Anna's Easy Bread at Able and Beyond.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .recipe-header { text-align: center; padding: var(--space-xl) 0; }
+    .recipe-title { font-size: 3rem; color: var(--color-primary-dark); margin-bottom: var(--space-sm); }
+    .recipe-container { max-width: 800px; margin: 0 auto; padding: 0 var(--space-md); }
+    .ingredients-box { background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: 2px solid var(--color-border); margin-bottom: var(--space-xl); }
+    .ingredients-box h3 { margin-top: 0; color: var(--color-accent); display: flex; align-items: center; gap: 10px; }
+    .ingredient-list { list-style: none; padding: 0; }
+    .ingredient-list li { padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; gap: 15px; font-size: 1.2rem; }
+    .ingredient-list input[type="checkbox"] { width: 24px; height: 24px; cursor: pointer; accent-color: var(--color-primary); }
+    .step-card { background: white; padding: var(--space-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-lg); border-left: 8px solid var(--color-primary); }
+    .step-symbol { font-size: 4rem; background: var(--color-bg); min-width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md); }
+    .step-text h4 { margin: 0 0 var(--space-xs) 0; font-size: 1.5rem; color: var(--color-primary-dark); }
+    .step-text p { margin: 0; font-size: 1.2rem; color: var(--color-text-main); }
+    .btn-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: var(--space-lg); text-decoration: none; color: var(--color-text-main); font-weight: 600; font-size: 1.1rem; }
+    .btn-back:hover { color: var(--color-primary); }
+    @media (max-width: 600px) { .step-card { flex-direction: column; text-align: center; } }
+  </style>
+</head>
+<body>
+  <header style="padding: var(--space-md) 0; background: var(--color-surface); box-shadow: var(--shadow-sm);">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);">
+          <path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        Able and Beyond
+      </a>
+    </div>
+  </header>
+  <main style="padding-bottom: var(--space-xl);">
+    <div class="container">
+      <div class="recipe-header">
+        <a href="index.html#recipes" class="btn-back">⬅️ Back to Recipe Hub</a>
+        <h1 class="recipe-title">Anna's Easy Bread 🍞</h1>
+        <p style="font-size: 1.2rem;">Get your hands messy and feel the dough!</p>
+        <img src="assets/images/anna-kneading.jpg" alt="Anna Kneading Bread" style="width: 100%; max-width: 600px; border-radius: var(--radius-lg); margin-top: var(--space-md); box-shadow: var(--shadow-md);">
+      </div>
+      <div class="recipe-container">
+        <div class="ingredients-box">
+          <h3>🛒 What You Need</h3>
+          <ul class="ingredient-list">
+            <li><input type="checkbox" id="ing1"><label for="ing1">🌾 500g Strong Bread Flour</label></li>
+            <li><input type="checkbox" id="ing2"><label for="ing2">🧂 1 Teaspoon Salt</label></li>
+            <li><input type="checkbox" id="ing3"><label for="ing3">🦠 1 Sachet Fast-Action Yeast (7g)</label></li>
+            <li><input type="checkbox" id="ing4"><label for="ing4">💧 300ml Warm Water</label></li>
+            <li><input type="checkbox" id="ing5"><label for="ing5">🫒 2 Tablespoons Olive Oil</label></li>
+          </ul>
+        </div>
+        <h3 style="font-size: 2rem; color: var(--color-accent); margin-bottom: var(--space-md);">🧑‍🍳 Step-by-Step</h3>
+        <div class="step-card"><div class="step-symbol">🧼</div><div class="step-text"><h4>Step 1: Wash Hands</h4><p>Wash your hands and clear a large space on the table.</p></div></div>
+        <div class="step-card"><div class="step-symbol">🥣</div><div class="step-text"><h4>Step 2: Mix Dry Ingredients</h4><p>Put the flour, salt, and yeast into a big bowl. Stir them together.</p></div></div>
+        <div class="step-card"><div class="step-symbol">💧</div><div class="step-text"><h4>Step 3: Add Water & Oil</h4><p>Pour in the warm water and olive oil. Mix it until it forms a sticky dough.</p></div></div>
+        <div class="step-card"><div class="step-symbol">🤲</div><div class="step-text"><h4>Step 4: Knead the Dough</h4><p>Take the dough out and push, pull, and stretch it on the table for 10 minutes. It should feel smooth and stretchy!</p></div></div>
+        <div class="step-card"><div class="step-symbol">⏳</div><div class="step-text"><h4>Step 5: Let it Rise</h4><p>Put the dough back in the bowl, cover it with a towel, and wait 1 hour for it to grow twice as big!</p></div></div>
+        <div class="step-card"><div class="step-symbol">🥖</div><div class="step-text"><h4>Step 6: Shape It</h4><p>Gently punch the dough and shape it into a round loaf. Put it on a baking tray.</p></div></div>
+        <div class="step-card"><div class="step-symbol">🔥</div><div class="step-text"><h4>Step 7: Bake</h4><p>Ask an adult to bake it at 220°C for 30 minutes until it sounds hollow when tapped.</p></div></div>
+      </div>
+    </div>
+  </main>
+  <footer><p>&copy; 2026 Able and Beyond. All rights reserved.</p></footer>
+</body>
+</html>
