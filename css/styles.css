@@ -141,8 +141,8 @@ section { padding: var(--space-xxl) 0; position: relative; }
 .gallery-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
 .gallery-row img { height: 120px; }
 /* Programs & Pricing Updates */
-.program-card { position: relative; }
-.format-badge { position: absolute; top: 1rem; left: 1rem; background: var(--color-surface); color: var(--color-primary-dark); padding: 0.5rem 1rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem; box-shadow: var(--shadow-sm); z-index: 2; border: 2px solid var(--color-primary); }
+.program-card { position: relative; display: flex; flex-direction: column; }
+.format-badge { display: inline-block; align-self: flex-start; background: var(--color-surface); color: var(--color-primary-dark); padding: 0.3rem 0.8rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; border: 2px solid var(--color-primary); margin-bottom: var(--space-sm); }
 .pricing-box { background: var(--color-bg); padding: var(--space-md); border-radius: var(--radius-sm); border-left: 4px solid var(--color-accent); margin: var(--space-md) 0; }
 .pricing-item { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; font-weight: 600; }
 .pricing-item span:first-child { color: var(--color-text-main); }
