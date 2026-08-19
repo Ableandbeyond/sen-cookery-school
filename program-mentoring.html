@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>1-to-1 Culinary Mentoring - Able and Beyond</title>
   <meta name="description" content="Personalised 1-to-1 culinary mentoring for SEN learners in London and online.">
+  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .program-header { text-align: center; padding: var(--space-xl) 0; }
     .program-title { font-size: 3rem; color: var(--color-primary-dark); margin-bottom: var(--space-sm); }
     .program-container { max-width: 800px; margin: 0 auto; padding: 0 var(--space-md); }
     
+    .hero-img { width: 100%; max-width: 600px; height: 350px; object-fit: cover; object-position: center 20%; border-radius: var(--radius-lg); margin-top: var(--space-lg); box-shadow: var(--shadow-md); }
+
     .pricing-box-large { background: var(--color-surface); padding: var(--space-xl); border-radius: var(--radius-lg); border: 2px solid var(--color-primary); margin-bottom: var(--space-xl); box-shadow: var(--shadow-md); }
     .pricing-box-large h3 { margin-top: 0; color: var(--color-primary-dark); font-size: 2rem; border-bottom: 2px solid var(--color-border); padding-bottom: 1rem; margin-bottom: 1.5rem; }
     
@@ -23,7 +26,7 @@
     .feature-list-large li { position: relative; padding-left: 2.5rem; margin-bottom: 1rem; font-size: 1.2rem; color: var(--color-text-main); line-height: 1.6; }
     .feature-list-large li::before { content: "✓"; position: absolute; left: 0; top: -2px; color: var(--color-primary); font-weight: bold; font-size: 1.5rem; }
     
-    .btn-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: var(--space-lg); text-decoration: none; color: var(--color-text-main); font-weight: 600; font-size: 1.1rem; }
+    .btn-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: var(--space-lg); text-decoration: none; color: var(--color-primary-dark); font-weight: 600; font-size: 1.1rem; }
     .btn-back:hover { color: var(--color-primary); }
     
     @media (max-width: 600px) {
@@ -49,8 +52,8 @@
       <div class="program-header">
         <a href="index.html#programs" class="btn-back">⬅️ Back to Programs</a>
         <h1 class="program-title">1-to-1 Culinary Mentoring</h1>
-        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Personalized kitchen sessions tailored to individual sensory, physical, and communication needs. A focused environment to develop specific life skills at a comfortable pace.</p>
-        <img src="assets/images/class-2.jpg" alt="1-to-1 Mentoring" style="width: 100%; max-width: 800px; border-radius: var(--radius-lg); margin-top: var(--space-lg); box-shadow: var(--shadow-md);">
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: var(--color-text-muted);">Personalized kitchen sessions tailored to individual sensory, physical, and communication needs. A focused environment to develop specific life skills at a comfortable pace.</p>
+        <img src="assets/images/class-2.jpg" alt="1-to-1 Mentoring" class="hero-img">
       </div>
 
       <div class="program-container">
