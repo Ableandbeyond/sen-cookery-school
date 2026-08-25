@@ -139,8 +139,14 @@
             <div class="program-content">
               <div class="format-badge">💻 Online Group</div>
               <h3>Sensory Cooking Groups</h3>
-              <p>Interactive online group sessions, paced gently with visual aids. These sessions focus on building confidence and exploring textures safely within a supportive community.</p>
-              <a href="program-group.html" class="btn btn-secondary" style="width: 100%; margin-top: var(--space-md);">View Details & Pricing</a>
+              <p>Interactive online group sessions, paced gently with visual aids. These sessions focus on building confidence safely.</p>
+              
+              <div class="pricing-summary">
+                <span>£20 / 60-min session</span>
+                <span style="color: var(--color-text-muted); font-weight: normal;">(or £85 for 5-week pass)</span>
+              </div>
+              
+              <button onclick="bookSession('group')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Enquire for Group Sessions</button>
             </div>
           </article>
 
@@ -150,8 +156,18 @@
             <div class="program-content">
               <div class="format-badge">💛 Online & In-Person</div>
               <h3>1-to-1 Culinary Mentoring</h3>
-              <p>Personalized kitchen sessions tailored to individual sensory, physical, and communication needs. A focused environment to develop specific life skills at a comfortable pace.</p>
-              <a href="program-mentoring.html" class="btn btn-secondary" style="width: 100%; margin-top: var(--space-md);">View Details & Pricing</a>
+              
+              <div class="fridge-banner">
+                <strong>🥕 "Fridge-Friendly" Cooking</strong>
+                No extra shopping needed! We adapt recipes around what you already have to reduce stress.
+              </div>
+
+              <div class="pricing-summary">
+                <span>Online: £50 / hour</span>
+                <span>In-Person: £80 / 1.5-hr</span>
+              </div>
+
+              <button onclick="bookSession('1to1')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Book 1-to-1 Mentoring</button>
             </div>
           </article>
 
@@ -160,9 +176,14 @@
             <img src="assets/images/class-3.jpg" alt="School & Specialist Workshops" class="program-img" loading="lazy">
             <div class="program-content">
               <div class="format-badge">🏫 London Schools</div>
-              <h3>School & Specialist Workshops</h3>
-              <p>Tailored on-site culinary sessions designed for SEN schools, alternative provision, and specialist resource bases across London.</p>
-              <a href="program-schools.html" class="btn btn-secondary" style="width: 100%; margin-top: var(--space-md);">View Details & Pricing</a>
+              <h3>School Workshops</h3>
+              <p>Tailored on-site culinary sessions designed for SEN schools, alternative provision, and specialist resource bases.</p>
+              
+              <div class="pricing-summary">
+                <span>From £150 / 2-hr</span>
+              </div>
+
+              <button onclick="bookSession('school')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Enquire for Schools</button>
             </div>
           </article>
         </div>
@@ -170,6 +191,44 @@
         <div class="trust-banner">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           <strong>Safeguarding & Quality:</strong> All sessions are led by Enhanced DBS checked, Food Hygiene Level 3 certified, and Safeguarding trained SEN specialists.
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule-section" aria-labelledby="schedule-heading">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2 id="schedule-heading">Monthly Schedule & Availability</h2>
+          <p>Find a time that works for you. We keep our schedules consistent to support routine building.</p>
+        </div>
+
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <h3>🗓️ Weekly Availability Window</h3>
+            <p style="color: var(--color-text-muted);">Available for 1-to-1 sessions and intro calls.</p>
+            <div style="margin-top: var(--space-md);">
+              <strong>Every Wednesday & Thursday</strong>
+              <div style="margin-top: 8px;">
+                <span class="time-slot">4:00 - 5:00 PM</span>
+                <span class="time-slot">5:00 - 6:00 PM</span>
+                <span class="time-slot">6:00 - 7:00 PM</span>
+              </div>
+            </div>
+            <button onclick="bookSession('1to1')" class="btn btn-secondary" style="width: 100%; margin-top: var(--space-lg);">Request a Wed/Thu Slot</button>
+          </div>
+
+          <div class="schedule-card">
+            <h3>👥 Online Group Calendar</h3>
+            <div class="notice-tag">
+              Dates and seasonal recipes released monthly. Spaces are limited to maintain small, supportive sensory groups.
+            </div>
+            <ul class="feature-list">
+              <li>Sensory Star Cookies (Week 1)</li>
+              <li>Heart Lattice Pie (Week 2)</li>
+              <li>Anna's Easy Bread (Week 3)</li>
+            </ul>
+            <button onclick="bookSession('group')" class="btn btn-secondary" style="width: 100%; margin-top: var(--space-sm);">Join the Waitlist</button>
+          </div>
         </div>
       </div>
     </section>
@@ -240,6 +299,7 @@
               <select id="interest" name="interest">
                 <option value="group">Sensory Cooking Groups</option>
                 <option value="1to1">1-to-1 Culinary Mentoring</option>
+                <option value="school">School & Specialist Workshops</option>
                 <option value="other">General Inquiry</option>
               </select>
             </div>
@@ -250,6 +310,19 @@
     </section>
 
   </main>
+
+  <script>
+    function bookSession(type) {
+      const select = document.getElementById('interest');
+      if (select) {
+        select.value = type;
+      }
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
 
   <footer>
     <div class="container">
