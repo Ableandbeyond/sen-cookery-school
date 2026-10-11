@@ -99,15 +99,23 @@
         
         <div class="biography-layout">
           <div class="bio-text">
-            <h3>A Life of Culinary Education</h3>
-            <p>I grew up in Italy in a home where cooking was part of everyday life and joy. My grandmother was an exceptional cook who prepared meals for people in the community, and I learned from her simply by being at her side. As a child, I was always experimenting in the kitchen beside my grandmother, discovering flavours, textures, and the pleasure of creating something with my hands. Those early experiences shaped my culinary identity and gave me a foundation of traditional skills that still guide me today.</p>
-            <p>In 1986 I moved to London with the intention of staying only a few months to learn English before returning to Italy. One decision led to another — six months became a year, and eventually London became my long‑term home. I continued my education, went to university, and completed many courses to expand my knowledge and skills.</p>
-            <p>Alongside my love for food, I developed a strong interest in movement and wellbeing, completing training as a Dance Movement Therapist. With over 25 years of experience working with SEN children and adults, I have combined creativity, expression, and care. I have worked in colleges, nursing homes, and hospitals, supporting people through therapeutic movement and helping them connect with their bodies and emotions.</p>
-            <p>Over time, my culinary skills and my passion for teaching grew stronger. Cooking became not only something I loved, but something I wanted to share. I specialised in inclusive education, teaching cookery and essential life skills to both mainstream and SEN audiences, including those with PMLD (Profound and Multiple Learning Disabilities). Today I teach at Capital City College Group in London, where I help students build confidence, independence, and joy through cooking.</p>
-            <p>I have developed many techniques over the years, and I am still learning every day. My teaching style continues to evolve, blending tradition, creativity, and accessibility. My new passion is teaching online, reaching learners everywhere and passing on the skills that began in my grandmother’s kitchen. I look forward to sharing my knowledge with you — and learning from you too.</p>
+            <h3>A Life of Culinary Education & Movement</h3>
+            
+            <div class="cred-badges">
+              <span class="cred-pill">🎓 25+ Yrs SEN & PMLD Specialist</span>
+              <span class="cred-pill">💃 Dance Movement Therapist</span>
+              <span class="cred-pill">👨‍🍳 College Culinary Educator</span>
+              <span class="cred-pill">📚 Children's Book Author</span>
+            </div>
+
+            <p>I grew up in Italy in a home where cooking was part of everyday life and joy. Experimenting beside my grandmother, I discovered flavours, textures, and the tactile pleasure of creating with my hands—a traditional foundation that still guides my teaching today.</p>
+            
+            <p>Moving to London in 1986, I trained as a <strong>Dance Movement Therapist</strong> and spent over <strong>25 years working with SEN children and adults</strong> across schools, colleges, nursing homes, and hospitals. I combine movement, sensory regulation, and kitchen creativity to help students build self-expression and motor confidence.</p>
+            
+            <p>Specialising in inclusive education, I teach culinary arts and life skills to mainstream and SEN learners, including those with <strong>PMLD (Profound and Multiple Learning Disabilities)</strong>. Today, I also teach at Capital City College Group in London, dedicated to passing on practical independence through adaptive, joyful cooking.</p>
             
             <h3 style="margin-top: var(--space-md);">The Eagle and the Parakeets</h3>
-            <p>Beyond the kitchen, Anna is also the proud author of the children's book <em>The Eagle and the Parakeets</em>. Through storytelling, she weaves themes of inclusivity, bravery, and friendship, reflecting the exact values she brings to every cooking session.</p>
+            <p>Beyond the kitchen, Anna is the proud author of the children's book <em>The Eagle and the Parakeets</em>, weaving themes of inclusivity, bravery, and friendship that reflect the exact values she brings to every cooking session.</p>
           </div>
           
           <div class="bio-gallery">
@@ -135,7 +143,7 @@
         <div class="grid">
           <!-- Card 1 -->
           <article class="card program-card">
-            <img src="assets/images/class-1.jpg" alt="Sensory Cooking Groups" class="program-img" loading="lazy">
+            <img src="assets/images/real-group-cooking.jpg" alt="SEN students working together with laptop visual guidance at green cutting stations" class="program-img" loading="lazy">
             <div class="program-content">
               <div class="format-badge">💻 Online Group</div>
               <h3>Sensory Cooking Groups</h3>
@@ -173,7 +181,7 @@
 
           <!-- Card 3 -->
           <article class="card program-card">
-            <img src="assets/images/class-3.jpg" alt="School & Specialist Workshops" class="program-img" loading="lazy">
+            <img src="assets/images/real-school-workshop.jpg" alt="Students plating finished dish with visual step-by-step screen in background" class="program-img" loading="lazy">
             <div class="program-content">
               <div class="format-badge">🏫 London Schools</div>
               <h3>School Workshops</h3>
@@ -286,24 +294,66 @@
           </div>
 
           <form id="booking-form" class="contact-form" aria-label="Booking and Inquiry Form">
+            <div id="form-helper" class="form-context-badge">
+              <span id="form-helper-text">✨ Select your program below to customize your inquiry</span>
+            </div>
+
             <div class="form-group">
               <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" required placeholder="e.g. Sarah Jenkins">
             </div>
+            
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" required placeholder="e.g. sarah@example.com">
             </div>
+
             <div class="form-group">
-              <label for="interest">I am interested in:</label>
-              <select id="interest" name="interest">
-                <option value="group">Sensory Cooking Groups</option>
-                <option value="1to1">1-to-1 Culinary Mentoring</option>
-                <option value="school">School & Specialist Workshops</option>
-                <option value="other">General Inquiry</option>
+              <label for="interest">Selected Program / Service:</label>
+              <select id="interest" name="interest" onchange="updateDynamicFields(this.value)">
+                <option value="group">Sensory Cooking Groups (£20 / session)</option>
+                <option value="1to1">1-to-1 Culinary Mentoring (£50/hr or £80 home visit)</option>
+                <option value="school">School & Specialist Workshops (From £150 / 2-hr)</option>
+                <option value="other">General Inquiry & Advice</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-sm);">Send Inquiry</button>
+
+            <!-- Dynamic Group Slot Selector -->
+            <div id="field-group" class="form-group" style="display: none;">
+              <label for="group-slot">Preferred Weekly Availability Slot:</label>
+              <select id="group-slot" name="group-slot">
+                <option value="wed-4pm">Wednesday 4:00 PM – 5:00 PM</option>
+                <option value="wed-5pm">Wednesday 5:00 PM – 6:00 PM</option>
+                <option value="thu-4pm">Thursday 4:00 PM – 5:00 PM</option>
+                <option value="thu-5pm">Thursday 5:00 PM – 6:00 PM</option>
+              </select>
+              <small class="tier-helper">🥕 Small groups (4–6 learners max). Visual ingredient checklist sent in advance.</small>
+            </div>
+
+            <!-- Dynamic 1-to-1 Field -->
+            <div id="field-1to1" class="form-group" style="display: none;">
+              <label for="sensory-notes">Learner Profile & Sensory Preferences:</label>
+              <textarea id="sensory-notes" name="sensory-notes" rows="3" placeholder="Tell us about food likes, sensory aversions (e.g. wet textures, loud sounds), or specific EHCP goals..."></textarea>
+              <label style="display: flex; align-items: center; gap: 8px; margin-top: 8px; font-weight: normal; cursor: pointer;">
+                <input type="checkbox" id="free-consultation" name="free-consultation" checked style="width: auto;">
+                <span>Request a <strong>Free 15-Minute Sensory Consultation</strong> with Cookery Chef Anna first</span>
+              </label>
+              <small class="tier-helper">🥘 Fridge-friendly guarantee: No pressure to buy special ingredients!</small>
+            </div>
+
+            <!-- Dynamic School Field -->
+            <div id="field-school" class="form-group" style="display: none;">
+              <label for="school-name">School / Organisation Name & Borough:</label>
+              <input type="text" id="school-name" name="school-name" placeholder="e.g. Highfield Specialist Resource Base, Camden">
+              <small class="tier-helper">📋 Full DBS, Food Hygiene Level 3 certification, and risk assessments included.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Message (Optional)</label>
+              <textarea id="message" name="message" rows="3" placeholder="Any questions or specific dates you have in mind?"></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%; margin-top: var(--space-xs);">Send Booking Inquiry</button>
           </form>
         </div>
       </div>
@@ -312,16 +362,57 @@
   </main>
 
   <script>
+    function updateDynamicFields(type) {
+      const helperBadge = document.getElementById('form-helper');
+      const helperText = document.getElementById('form-helper-text');
+      const groupDiv = document.getElementById('field-group');
+      const oneToOneDiv = document.getElementById('field-1to1');
+      const schoolDiv = document.getElementById('field-school');
+      const submitBtn = document.getElementById('submit-btn');
+
+      if (!groupDiv || !oneToOneDiv || !schoolDiv) return;
+
+      groupDiv.style.display = 'none';
+      oneToOneDiv.style.display = 'none';
+      schoolDiv.style.display = 'none';
+
+      if (type === 'group') {
+        groupDiv.style.display = 'block';
+        helperText.innerHTML = '💻 <strong>Sensory Online Groups:</strong> £20 single session or £85 for 5-week pass. Friendly groups (4–6 max).';
+        submitBtn.textContent = 'Enquire for Group Session';
+      } else if (type === '1to1') {
+        oneToOneDiv.style.display = 'block';
+        helperText.innerHTML = '🥕 <strong>1-to-1 Culinary Mentoring:</strong> Fridge-Friendly cooking tailored to your child’s EHCP and sensory profile.';
+        submitBtn.textContent = 'Request 1-to-1 Mentoring Call';
+      } else if (type === 'school') {
+        schoolDiv.style.display = 'block';
+        helperText.innerHTML = '🏫 <strong>School & Centre Workshops:</strong> Bespoke on-site sessions from £150 with complete risk assessment.';
+        submitBtn.textContent = 'Request School Workshop Pack';
+      } else {
+        helperText.innerHTML = '✨ <strong>General Inquiry:</strong> Ask us any questions about our inclusive culinary curriculum.';
+        submitBtn.textContent = 'Send Inquiry';
+      }
+    }
+
     function bookSession(type) {
       const select = document.getElementById('interest');
       if (select) {
         select.value = type;
+        updateDynamicFields(type);
       }
       const contactSection = document.getElementById('contact');
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.getElementById('interest');
+      if (select) {
+        updateDynamicFields(select.value);
+      }
+    });
   </script>
 
   <footer>
