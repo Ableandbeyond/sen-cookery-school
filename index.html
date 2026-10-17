@@ -185,9 +185,9 @@
               <h3>Sensory Cooking Groups</h3>
               <p>Interactive online group sessions, paced gently with visual aids. These sessions focus on building confidence safely.</p>
               
-              <div class="pricing-summary">
+              <div class="pricing-summary" id="pricing-card-group">
                 <span>£20 / 60-min session</span>
-                <span style="color: var(--color-text-muted); font-weight: normal;">(or £85 for 5-week pass)</span>
+                <span style="color: var(--color-text-muted); font-weight: normal;">£85 for 5-week pass <strong>(Save £15)</strong></span>
               </div>
               
               <button onclick="bookSession('group')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Enquire for Group Sessions</button>
@@ -198,7 +198,7 @@
           <article class="card program-card">
             <img src="assets/images/class-2.jpg" alt="1-to-1 Culinary Mentoring" class="program-img" loading="lazy">
             <div class="program-content">
-              <div class="format-badge">💛 Online & In-Person</div>
+              <div class="format-badge">💛 Online &amp; In-Person</div>
               <h3>1-to-1 Culinary Mentoring</h3>
               
               <div class="fridge-banner">
@@ -206,9 +206,9 @@
                 No extra shopping needed! We adapt recipes around what you already have to reduce stress.
               </div>
 
-              <div class="pricing-summary">
-                <span>Online: £50 / hour</span>
-                <span>In-Person: £80 / 1.5-hr</span>
+              <div class="pricing-summary" id="pricing-card-1to1">
+                <span>Online: £50 / 60-min session</span>
+                <span>In-Person Home Visit (London): £80 / 1.5-hr session</span>
               </div>
 
               <button onclick="bookSession('1to1')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Book 1-to-1 Mentoring</button>
@@ -220,11 +220,11 @@
             <img src="assets/images/real-school-workshop.jpg" alt="Students plating finished dish with visual step-by-step screen in background" class="program-img" loading="lazy">
             <div class="program-content">
               <div class="format-badge">🏫 London Schools</div>
-              <h3>School Workshops</h3>
+              <h3>School &amp; Specialist Workshops</h3>
               <p>Tailored on-site culinary sessions designed for SEN schools, alternative provision, and specialist resource bases.</p>
               
-              <div class="pricing-summary">
-                <span>From £150 / 2-hr</span>
+              <div class="pricing-summary" id="pricing-card-school">
+                <span>From £150 / 2-hr workshop</span>
               </div>
 
               <button onclick="bookSession('school')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Enquire for Schools</button>
@@ -234,7 +234,7 @@
         
         <div class="trust-banner">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          <strong>Safeguarding & Quality:</strong> All sessions are led by Enhanced DBS checked, Food Hygiene Level 3 certified, and Safeguarding trained SEN specialists.
+          <strong>Safeguarding &amp; Quality:</strong> All sessions are led by Enhanced DBS checked, Food Hygiene Level 3 certified, and Safeguarding trained SEN specialists.
         </div>
       </div>
     </section>
@@ -242,20 +242,20 @@
     <section class="schedule-section" aria-labelledby="schedule-heading">
       <div class="container reveal">
         <div class="section-header">
-          <h2 id="schedule-heading">Monthly Schedule & Availability</h2>
+          <h2 id="schedule-heading">Monthly Schedule &amp; Availability</h2>
           <p>Find a time that works for you. We keep our schedules consistent to support routine building.</p>
         </div>
 
         <div class="schedule-grid">
           <div class="schedule-card">
             <h3>🗓️ Weekly Availability Window</h3>
-            <p style="color: var(--color-text-muted);">Available for 1-to-1 sessions and intro calls.</p>
+            <p style="color: var(--color-text-muted);">Available for 1-to-1 sessions, online groups, and introductory calls.</p>
             <div style="margin-top: var(--space-md);">
-              <strong>Every Wednesday & Thursday</strong>
-              <div style="margin-top: 8px;">
-                <span class="time-slot">4:00 - 5:00 PM</span>
-                <span class="time-slot">5:00 - 6:00 PM</span>
-                <span class="time-slot">6:00 - 7:00 PM</span>
+              <strong id="availability-days-label">Every Wednesday &amp; Thursday</strong>
+              <div id="availability-slots-badges" style="margin-top: 8px;">
+                <span class="time-slot">4:00 – 5:00 PM</span>
+                <span class="time-slot">5:00 – 6:00 PM</span>
+                <span class="time-slot">6:00 – 7:00 PM</span>
               </div>
             </div>
             <button onclick="bookSession('1to1')" class="btn btn-secondary" style="width: 100%; margin-top: var(--space-lg);">Request a Wed/Thu Slot</button>
@@ -554,23 +554,25 @@
             </div>
 
             <div class="form-group">
-              <label for="interest">Selected Program / Service:</label>
+              <label for="interest">Selected Programme / Service:</label>
               <select id="interest" name="interest" onchange="updateDynamicFields(this.value)">
-                <option value="group">Sensory Cooking Groups (£20 / session)</option>
-                <option value="1to1">1-to-1 Culinary Mentoring (£50/hr or £80 home visit)</option>
-                <option value="school">School &amp; Specialist Workshops (From £150 / 2-hr)</option>
-                <option value="other">General Inquiry &amp; Advice</option>
+                <option value="group">Sensory Cooking Groups — £20 / 60-min session or £85 for 5-week pass (Save £15)</option>
+                <option value="1to1">1-to-1 Culinary Mentoring — Online: £50 / 60-min session | In-Person Home Visit (London): £80 / 1.5-hr session</option>
+                <option value="school">School &amp; Specialist Workshops — From £150 / 2-hr workshop</option>
+                <option value="other">General Enquiry &amp; Advice</option>
               </select>
             </div>
 
-            <!-- Dynamic Group Slot Selector -->
+            <!-- Dynamic Weekly Slot Selector (Shared for Group & 1-to-1) -->
             <div id="field-group" class="form-group" style="display: none;">
-              <label for="group-slot">Preferred Weekly Availability Slot:</label>
+              <label for="group-slot">Preferred Weekly Availability Slot (Wed / Thu, 4:00 – 7:00 PM):</label>
               <select id="group-slot" name="group-slot">
                 <option value="wed-4pm">Wednesday 4:00 PM – 5:00 PM</option>
                 <option value="wed-5pm">Wednesday 5:00 PM – 6:00 PM</option>
+                <option value="wed-6pm">Wednesday 6:00 PM – 7:00 PM</option>
                 <option value="thu-4pm">Thursday 4:00 PM – 5:00 PM</option>
                 <option value="thu-5pm">Thursday 5:00 PM – 6:00 PM</option>
+                <option value="thu-6pm">Thursday 6:00 PM – 7:00 PM</option>
               </select>
               <small class="tier-helper">🥕 Small groups (4–6 learners max). Visual ingredient checklist sent in advance.</small>
             </div>
@@ -607,6 +609,106 @@
   </main>
 
   <script>
+    // Single Source of Truth for Pricing & Availability (prevents drift across cards, availability & form)
+    const SITE_PRICING_DATA = {
+      availability: {
+        daysLabel: 'Every Wednesday & Thursday',
+        timeWindows: ['4:00 – 5:00 PM', '5:00 – 6:00 PM', '6:00 – 7:00 PM'],
+        slots: [
+          { value: 'wed-4pm', label: 'Wednesday 4:00 PM – 5:00 PM' },
+          { value: 'wed-5pm', label: 'Wednesday 5:00 PM – 6:00 PM' },
+          { value: 'wed-6pm', label: 'Wednesday 6:00 PM – 7:00 PM' },
+          { value: 'thu-4pm', label: 'Thursday 4:00 PM – 5:00 PM' },
+          { value: 'thu-5pm', label: 'Thursday 5:00 PM – 6:00 PM' },
+          { value: 'thu-6pm', label: 'Thursday 6:00 PM – 7:00 PM' }
+        ]
+      },
+      programmes: {
+        group: {
+          title: 'Sensory Cooking Groups',
+          lines: [
+            { text: '£20 / 60-min session', muted: false },
+            { text: '£85 for 5-week pass <strong>(Save £15)</strong>', muted: true }
+          ],
+          dropdownLabel: 'Sensory Cooking Groups — £20 / 60-min session or £85 for 5-week pass (Save £15)',
+          helperHtml: '💻 <strong>Sensory Cooking Groups:</strong> £20 / 60-min session or £85 for 5-week pass (Save £15). Friendly groups (4–6 max).',
+          ctaText: 'Enquire About a Group Space'
+        },
+        '1to1': {
+          title: '1-to-1 Culinary Mentoring',
+          lines: [
+            { text: 'Online: £50 / 60-min session', muted: false },
+            { text: 'In-Person Home Visit (London): £80 / 1.5-hr session', muted: false }
+          ],
+          dropdownLabel: '1-to-1 Culinary Mentoring — Online: £50 / 60-min session | In-Person Home Visit (London): £80 / 1.5-hr session',
+          helperHtml: '🥕 <strong>1-to-1 Culinary Mentoring:</strong> Online: £50 / 60-min session | In-Person Home Visit (London): £80 / 1.5-hr session.',
+          ctaText: 'Request 1-to-1 Mentoring Call'
+        },
+        school: {
+          title: 'School & Specialist Workshops',
+          lines: [
+            { text: 'From £150 / 2-hr workshop', muted: false }
+          ],
+          dropdownLabel: 'School & Specialist Workshops — From £150 / 2-hr workshop',
+          helperHtml: '🏫 <strong>School &amp; Specialist Workshops:</strong> From £150 / 2-hr workshop with complete risk assessment.',
+          ctaText: 'Request School Workshop Pack'
+        },
+        other: {
+          title: 'General Enquiry & Advice',
+          lines: [],
+          dropdownLabel: 'General Enquiry & Advice',
+          helperHtml: '✨ <strong>General Enquiry:</strong> Ask us any questions about our inclusive culinary curriculum.',
+          ctaText: 'Enquire About a Space'
+        }
+      }
+    };
+
+    function renderPricingAndAvailability() {
+      // 1. Render Programme Card Pricing Summaries
+      ['group', '1to1', 'school'].forEach(key => {
+        const container = document.getElementById('pricing-card-' + key);
+        const prog = SITE_PRICING_DATA.programmes[key];
+        if (container && prog) {
+          container.innerHTML = prog.lines.map(line =>
+            line.muted
+              ? `<span style="color: var(--color-text-muted); font-weight: normal;">${line.text}</span>`
+              : `<span>${line.text}</span>`
+          ).join('');
+        }
+      });
+
+      // 2. Render Availability Card Days & Time Window Badges
+      const daysEl = document.getElementById('availability-days-label');
+      if (daysEl) {
+        daysEl.textContent = SITE_PRICING_DATA.availability.daysLabel;
+      }
+      const badgesEl = document.getElementById('availability-slots-badges');
+      if (badgesEl) {
+        badgesEl.innerHTML = SITE_PRICING_DATA.availability.timeWindows
+          .map(win => `<span class="time-slot">${win}</span>`)
+          .join('');
+      }
+
+      // 3. Render Form Programme Dropdown
+      const interestSelect = document.getElementById('interest');
+      if (interestSelect) {
+        const currentVal = interestSelect.value || 'group';
+        interestSelect.innerHTML = Object.keys(SITE_PRICING_DATA.programmes).map(key => {
+          const prog = SITE_PRICING_DATA.programmes[key];
+          return `<option value="${key}">${prog.dropdownLabel}</option>`;
+        }).join('');
+        interestSelect.value = currentVal;
+      }
+
+      // 4. Render Form Weekly Time Slot Dropdown
+      const slotSelect = document.getElementById('group-slot');
+      if (slotSelect) {
+        slotSelect.innerHTML = SITE_PRICING_DATA.availability.slots
+          .map(slot => `<option value="${slot.value}">${slot.label}</option>`)
+          .join('');
+      }
+    }
+
     function filterGallery(category, activeBtn) {
       const tabs = document.querySelectorAll('.gallery-tab');
       tabs.forEach(tab => {
@@ -630,7 +732,6 @@
     }
 
     function updateDynamicFields(type) {
-      const helperBadge = document.getElementById('form-helper');
       const helperText = document.getElementById('form-helper-text');
       const groupDiv = document.getElementById('field-group');
       const oneToOneDiv = document.getElementById('field-1to1');
@@ -643,21 +744,17 @@
       oneToOneDiv.style.display = 'none';
       schoolDiv.style.display = 'none';
 
+      const prog = SITE_PRICING_DATA.programmes[type] || SITE_PRICING_DATA.programmes.other;
+      helperText.innerHTML = prog.helperHtml;
+      submitBtn.textContent = prog.ctaText;
+
       if (type === 'group') {
         groupDiv.style.display = 'block';
-        helperText.innerHTML = '💻 <strong>Sensory Online Groups:</strong> £20 single session or £85 for 5-week pass. Friendly groups (4–6 max).';
-        submitBtn.textContent = 'Enquire About a Group Space';
       } else if (type === '1to1') {
+        groupDiv.style.display = 'block';
         oneToOneDiv.style.display = 'block';
-        helperText.innerHTML = '🥕 <strong>1-to-1 Culinary Mentoring:</strong> Fridge-Friendly cooking tailored to your child’s EHCP and sensory profile.';
-        submitBtn.textContent = 'Request 1-to-1 Mentoring Call';
       } else if (type === 'school') {
         schoolDiv.style.display = 'block';
-        helperText.innerHTML = '🏫 <strong>School & Centre Workshops:</strong> Bespoke on-site sessions from £150 with complete risk assessment.';
-        submitBtn.textContent = 'Request School Workshop Pack';
-      } else {
-        helperText.innerHTML = '✨ <strong>General Inquiry:</strong> Ask us any questions about our inclusive culinary curriculum.';
-        submitBtn.textContent = 'Enquire About a Space';
       }
     }
 
@@ -675,6 +772,7 @@
 
     // Initialize on load
     document.addEventListener('DOMContentLoaded', () => {
+      renderPricingAndAvailability();
       const select = document.getElementById('interest');
       if (select) {
         updateDynamicFields(select.value);
