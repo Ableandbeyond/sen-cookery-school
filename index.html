@@ -1,256 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Able and Beyond | SEN Cookery School</title>
-  <meta name="description" content="Empowering SEN Learners Through the Joy of Cooking. Tailored, sensory-friendly online culinary education.">
-  
+  <title>Able and Beyond | SEN Cookery School — Inclusive Online &amp; London Cooking Classes</title>
+  <meta name="description" content="Calm, sensory-friendly online and in-person cooking sessions for SEN learners (children, young people, and adults), families, and schools across London and the UK.">
+
+  <!-- Open Graph & Social Meta Tags (Item 5) -->
+  <meta property="og:title" content="Able and Beyond | SEN Cookery School">
+  <meta property="og:description" content="Tailored, sensory-aware cooking classes for SEN learners, families, and schools. Book a free 15-minute sensory consultation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ableandbeyond.github.io/sen-cookery-school/">
+  <meta property="og:image" content="https://ableandbeyond.github.io/sen-cookery-school/assets/images/hero-cooking.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Able and Beyond | SEN Cookery School">
+  <meta name="twitter:description" content="Tailored, sensory-aware cooking classes for SEN learners, families, and schools.">
+  <meta name="twitter:image" content="https://ableandbeyond.github.io/sen-cookery-school/assets/images/hero-cooking.jpg">
+
+  <link rel="canonical" href="https://ableandbeyond.github.io/sen-cookery-school/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
   <style>
     @font-face {
       font-family: 'OpenDyslexic';
       src: url('https://dyslexicfonts.com/fonts/OpenDyslexic-Regular.woff') format('woff');
-      font-weight: normal; font-style: normal; font-display: swap;
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
     }
   </style>
 
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id="top">
 
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Sticky Header with Compact Navigation, Accessibility Panel & Persistent CTA (Items 7, 14, 15) -->
   <header>
     <div class="container nav-container">
-      <a href="#" class="logo">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);">
-          <path d="M12 2v20"></path>
-          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+      <a href="#top" class="logo" aria-label="Able and Beyond SEN Cookery School — Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--color-accent);">
+          <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+          <line x1="6" y1="17" x2="18" y2="17"/>
         </svg>
-        Able and Beyond
+        <span>Able and Beyond</span>
       </a>
-      <nav aria-label="Main Navigation">
+
+      <nav aria-label="Primary Navigation">
         <ul class="nav-links">
-          <li><a href="#main-content">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#programs">Our Programs</a></li>
-          <li><a href="#sen-approach">SEN &amp; Sensory Approach</a></li>
-          <li><a href="#gallery">Our Kitchen in Action</a></li>
-          <li><a href="#recipes">Recipe Hub</a></li>
-          <li><a href="#contact">Contact/Enquire</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#programs">Programmes</a></li>
+          <li><a href="#sen-approach">SEN Approach</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
-      <div class="accessibility-controls">
-        <button id="dyslexia-toggle" class="toggle-btn" aria-pressed="false" aria-label="Toggle Dyslexia Friendly Font">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M12 4v1m5.66 1.34-0.7.7m3.04 4.96h-1m-1.34 5.66-.7-0.7m-4.96 3.04v-1m-5.66-1.34 0.7-0.7M4 12H3m1.34-5.66 0.7 0.7"/></svg>
-          Dyslexia Mode
-        </button>
+
+      <div class="header-actions">
+        <!-- Expandable Accessibility Panel (Item 15) -->
+        <div class="a11y-wrapper">
+          <button type="button" id="a11y-panel-trigger" class="toggle-btn" aria-expanded="false" aria-controls="a11y-panel">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="4.5" r="2"/>
+              <path d="M4 9h16"/>
+              <path d="M12 9v5"/>
+              <path d="m9 20 3-6 3 6"/>
+            </svg>
+            <span>Accessibility</span>
+          </button>
+
+          <div id="a11y-panel" class="a11y-panel" role="region" aria-label="Accessibility display settings" hidden>
+            <div class="a11y-panel-header">
+              <h2>Display &amp; Reading Options</h2>
+              <button type="button" id="a11y-panel-close" class="a11y-close-btn" aria-label="Close accessibility panel">✕</button>
+            </div>
+
+            <div class="a11y-group">
+              <span class="a11y-group-label">Text Size</span>
+              <div class="a11y-size-row" role="group" aria-label="Select text size">
+                <button type="button" class="a11y-size-btn" data-size="standard" aria-pressed="true">Standard</button>
+                <button type="button" class="a11y-size-btn" data-size="lg" aria-pressed="false">Large</button>
+                <button type="button" class="a11y-size-btn" data-size="xl" aria-pressed="false">Extra Large</button>
+              </div>
+            </div>
+
+            <div class="a11y-group">
+              <span class="a11y-group-label">Reading &amp; Sensory Comfort</span>
+              <button type="button" id="a11y-dyslexia-btn" class="a11y-toggle-row" aria-pressed="false">
+                <span>Dyslexia-Friendly Font</span>
+                <span class="a11y-status">Off</span>
+              </button>
+              <button type="button" id="a11y-spacing-btn" class="a11y-toggle-row" aria-pressed="false">
+                <span>Wider Line &amp; Letter Spacing</span>
+                <span class="a11y-status">Off</span>
+              </button>
+              <button type="button" id="a11y-contrast-btn" class="a11y-toggle-row" aria-pressed="false">
+                <span>High Contrast Mode</span>
+                <span class="a11y-status">Off</span>
+              </button>
+              <button type="button" id="a11y-calm-btn" class="a11y-toggle-row" aria-pressed="false">
+                <span>Calm Mode (Muted &amp; No Motion)</span>
+                <span class="a11y-status">Off</span>
+              </button>
+            </div>
+
+            <button type="button" id="a11y-reset-btn" class="a11y-reset-btn">Reset to Default Settings</button>
+          </div>
+        </div>
+
+        <a href="#contact" onclick="bookSession('consultation')" class="btn btn-primary header-enquire-btn">Enquire</a>
       </div>
     </div>
   </header>
 
   <main id="main-content">
-    
+
+    <!-- 1. HERO SECTION (Items 6, 11, 14, 19) -->
     <section class="hero container reveal" aria-labelledby="hero-heading">
       <div class="hero-content">
-        <div class="format-badge" style="margin-bottom: var(--space-sm);">🌿 Calm, Structured &amp; Sensory-Aware</div>
+        <div class="format-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Calm, Structured &amp; Sensory-Aware</span>
+        </div>
         <h1 id="hero-heading">Empowering SEN Learners Through the Joy of Cooking</h1>
-        <p class="subtitle">Tailored, sensory-friendly online and in-person culinary education developed by experienced SEN educators and specialist chefs.</p>
+        <p class="subtitle">Personalised online and in-person culinary sessions for children, young people, and adults with Special Educational Needs—led by experienced SEN educators and specialist chefs.</p>
         <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Enquire About a Space</a>
-          <a href="#sen-approach" class="btn btn-secondary">Learn About Our SEN Approach</a>
+          <a href="?service=consultation#contact" onclick="bookSession('consultation'); return false;" class="btn btn-primary">Book a Free 15-Min Sensory Consultation</a>
+          <a href="#programs" class="btn btn-secondary">See Programmes &amp; Prices</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="assets/images/real-group-cooking.jpg" alt="SEN learners cooking together with color-coded chopping boards, visual laptop steps, and warm tutor support." loading="eager">
+        <!-- SAFEGUARDING NOTE: Confirm written consent exists for every learner photo before publishing. Do not include learner names in captions or alt text. -->
+        <picture>
+          <source srcset="assets/images/hero-cooking.webp" type="image/webp">
+          <img src="assets/images/hero-cooking.jpg" alt="A learner smiling and mixing ingredients in a bowl during a calm, sensory-friendly cooking activity." width="800" height="600" loading="eager">
+        </picture>
       </div>
     </section>
 
-    <!-- Immediate Parent Reassurance Bar near Top of Homepage -->
-    <aside class="reassurance-strip" aria-label="Key Parent Reassurances">
+    <!-- Parent Reassurance Bar near Top of Homepage (Items 14 & 19) -->
+    <aside class="reassurance-strip" aria-label="Key Safeguarding and Sensory Reassurances">
       <div class="container">
         <div class="reassurance-grid">
           <div class="reassurance-item">
-            <div class="reassurance-icon" aria-hidden="true">🛡️</div>
+            <div class="reassurance-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
             <div class="reassurance-text">
               <strong>Safety &amp; Safeguarding First</strong>
-              <span>Enhanced DBS checked, Safeguarding &amp; Level 3 Food Hygiene certified specialists using adaptive safety tools.</span>
+              <span>Enhanced DBS checked, Safeguarding &amp; Level 3 Food Hygiene certified educators using adaptive safety tools.</span>
             </div>
           </div>
+
           <div class="reassurance-item">
-            <div class="reassurance-icon" aria-hidden="true">👥</div>
+            <div class="reassurance-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
             <div class="reassurance-text">
               <strong>Small, Supportive Groups</strong>
-              <span>Maximum 4–6 learners per online group so every child is heard, supported, and never overwhelmed.</span>
+              <span>Maximum 4–6 learners per online group so everyone gets time and attention, and we go at your learner's pace.</span>
             </div>
           </div>
+
           <div class="reassurance-item">
-            <div class="reassurance-icon" aria-hidden="true">🌱</div>
+            <div class="reassurance-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
             <div class="reassurance-text">
-              <strong>Specialized Sensory Awareness</strong>
-              <span>25+ years supporting Autism, ADHD, Dyspraxia &amp; PMLD with visual symbols and zero texture pressure.</span>
+              <strong>Specialised Sensory Awareness</strong>
+              <span>25+ years supporting Autism, ADHD, Dyspraxia &amp; PMLD across children and adults, with no pressure to touch anything.</span>
             </div>
           </div>
+
           <div class="reassurance-item">
-            <div class="reassurance-icon" aria-hidden="true">🥕</div>
+            <div class="reassurance-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+            </div>
             <div class="reassurance-text">
               <strong>"Fridge-Friendly" Flexibility</strong>
-              <span>No stressful ingredient shopping for 1-to-1 sessions—we adapt around foods your child already trusts.</span>
+              <span>No stressful ingredient shopping for 1-to-1 sessions—we adapt recipes around foods your household already trusts.</span>
             </div>
           </div>
         </div>
       </div>
     </aside>
 
-    <section id="about" class="bg-alt" aria-labelledby="about-heading" style="padding-top: var(--space-xl);">
+    <!-- 2. HOW IT WORKS SECTION (Item 8 — 3 Steps Directly After Hero) -->
+    <section id="how-it-works" aria-labelledby="how-heading">
       <div class="container reveal">
         <div class="section-header">
-          <h2 id="about-heading">Meet the Founders</h2>
-          <p>Fostering independence, fine motor development, sensory exploration, and vital life skills in a safe, structured online environment.</p>
+          <h2 id="how-heading">How It Works</h2>
+          <p>Getting started is gentle, predictable, and tailored around your household or school routine.</p>
         </div>
-        
-        <div class="grid">
-          <article class="card founder-card">
-            <img src="assets/images/lucas.jpg" alt="Lucas Rambourg" class="founder-img" loading="lazy">
-            <h3>Lucas Rambourg</h3>
-            <p class="founder-role">Co-Founder & Tech Lead</p>
-            <p>Specialist SEN teacher and tutor with over 14 years of classroom and 1-to-1 experience. Lucas oversees our technical systems and curriculum structure to ensure a seamless learning experience.</p>
+
+        <div class="steps-grid">
+          <article class="step-item">
+            <div class="step-icon-circle" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <span class="step-number-tag">Step 1</span>
+            <h3>1. Enquire</h3>
+            <p>Send us a short message using our form below to tell us whether you are looking for group classes, 1-to-1 mentoring, or school provision.</p>
           </article>
 
-          <article class="card founder-card">
-            <img src="assets/images/anna-book.jpg" alt="Anna Maria Racco" class="founder-img" loading="lazy">
-            <h3>Anna Maria Racco</h3>
-            <p class="founder-role">Co-Founder & Cookery Chef</p>
-            <p>Italian Chef and specialist SEN teacher with over 10 years of experience teaching culinary arts across London schools. Anna leads recipe design and interactive cooking sessions.</p>
+          <article class="step-item">
+            <div class="step-icon-circle" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <span class="step-number-tag">Step 2</span>
+            <h3>2. Free Sensory Consultation</h3>
+            <p>Enjoy a relaxed 15-minute chat with Cookery Chef Anna to discuss sensory preferences, favourite foods, and any adaptations needed.</p>
+          </article>
+
+          <article class="step-item">
+            <div class="step-icon-circle" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
+            </div>
+            <span class="step-number-tag">Step 3</span>
+            <h3>3. Your First Session</h3>
+            <p>Receive your visual symbol guide ahead of time and join us online or in person to cook at a calm, unhurried pace.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="anna-biography" aria-labelledby="anna-heading" style="padding-top: var(--space-xl);">
+    <!-- 3. PROGRAMMES & PRICES SECTION (Items 2, 11, 14, 16, 17, 20) -->
+    <section id="programs" class="bg-alt" aria-labelledby="programs-heading">
       <div class="container reveal">
         <div class="section-header">
-          <h2 id="anna-heading">Meet Cookery Chef Anna Maria Racco</h2>
-          <p>The culinary heart behind Able and Beyond, sharing her passion for inclusive cooking and storytelling.</p>
-        </div>
-        
-        <div class="biography-layout">
-          <div class="bio-text">
-            <h3>A Life of Culinary Education & Movement</h3>
-            
-            <div class="cred-badges">
-              <span class="cred-pill">🎓 25+ Yrs SEN & PMLD Specialist</span>
-              <span class="cred-pill">💃 Dance Movement Therapist</span>
-              <span class="cred-pill">👨‍🍳 College Culinary Educator</span>
-              <span class="cred-pill">📚 Children's Book Author</span>
-            </div>
-
-            <p>I grew up in Italy in a home where cooking was part of everyday life and joy. Experimenting beside my grandmother, I discovered flavours, textures, and the tactile pleasure of creating with my hands—a traditional foundation that still guides my teaching today.</p>
-            
-            <p>Moving to London in 1986, I trained as a <strong>Dance Movement Therapist</strong> and spent over <strong>25 years working with SEN children and adults</strong> across schools, colleges, nursing homes, and hospitals. I combine movement, sensory regulation, and kitchen creativity to help students build self-expression and motor confidence.</p>
-            
-            <p>Specialising in inclusive education, I teach culinary arts and life skills to mainstream and SEN learners, including those with <strong>PMLD (Profound and Multiple Learning Disabilities)</strong>. Today, I also teach at Capital City College Group in London, dedicated to passing on practical independence through adaptive, joyful cooking.</p>
-            
-            <h3 style="margin-top: var(--space-md);">The Eagle and the Parakeets</h3>
-            <p>Beyond the kitchen, Anna is the proud author of the children's book <em>The Eagle and the Parakeets</em>, weaving themes of inclusivity, bravery, and friendship that reflect the exact values she brings to every cooking session.</p>
-          </div>
-          
-          <div class="bio-gallery">
-            <img src="assets/images/anna-book.jpg" alt="Anna sitting comfortably holding her children's book, The Eagle and the Parakeets" class="gallery-img main-img reveal" loading="lazy">
-            <div class="gallery-row">
-              <img src="assets/images/anna-kneading.jpg" alt="Anna joyfully kneading dough in the kitchen" class="gallery-img reveal" loading="lazy">
-              <img src="assets/images/fun-cookies.jpg" alt="Colorful sensory cookies on a plate" class="gallery-img reveal" loading="lazy">
-              <img src="assets/images/heart-pie.jpg" alt="A beautiful rustic lattice pie with a red filling and heart cutouts" class="gallery-img reveal" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Organic Wave Divider (Inverted) -->
-    <svg viewBox="0 0 1440 120" fill="var(--color-primary-light)" style="display: block; transform: rotate(180deg); margin-bottom: -60px;"><path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>
-
-    <section id="programs" aria-labelledby="programs-heading">
-      <div class="container reveal">
-        <div class="section-header">
-          <h2 id="programs-heading">Programs & Online Workshops</h2>
-          <p>Discover our range of supportive, step-by-step culinary experiences designed specifically for diverse sensory and learning needs.</p>
+          <h2 id="programs-heading">Programmes &amp; Prices</h2>
+          <p>Supportive, step-by-step culinary experiences designed for children, young people, and adult SEN learners.</p>
         </div>
 
         <div class="grid">
-          <!-- Card 1 -->
+          <!-- Card 1: Sensory Cooking Groups -->
           <article class="card program-card">
-            <img src="assets/images/real-group-cooking.jpg" alt="SEN students working together with laptop visual guidance at green cutting stations" class="program-img" loading="lazy">
+            <!-- Flagged in Item 16: Using class-1.jpg here so real-group-cooking.jpg is not repeated 3 times -->
+            <picture>
+              <source srcset="assets/images/class-1.webp" type="image/webp">
+              <img src="assets/images/class-1.jpg" alt="Learners preparing colourful ingredients together during a guided group session" width="600" height="400" class="program-img" loading="lazy">
+            </picture>
             <div class="program-content">
-              <div class="format-badge">💻 Online Group</div>
+              <div class="format-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                <span>Online Group (Zoom)</span>
+              </div>
               <h3>Sensory Cooking Groups</h3>
-              <p>Interactive online group sessions, paced gently with visual aids. These sessions focus on building confidence safely.</p>
-              
+              <p>Interactive online group sessions paced gently with visual aids, helping learners explore textures and build confidence within a small community.</p>
+              <ul class="feature-list">
+                <li>Small groups (maximum 4–6 learners)</li>
+                <li>Visual recipe guide sent before class</li>
+                <li>Camera-optional, low-demand environment</li>
+              </ul>
               <div class="pricing-summary" id="pricing-card-group">
                 <span>£20 / 60-min session</span>
                 <span style="color: var(--color-text-muted); font-weight: normal;">£85 for 5-week pass <strong>(Save £15)</strong></span>
               </div>
-              
-              <button onclick="bookSession('group')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Enquire for Group Sessions</button>
+              <button type="button" onclick="bookSession('group')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Enquire About Group Sessions</button>
             </div>
           </article>
 
-          <!-- Card 2 -->
+          <!-- Card 2: 1-to-1 Culinary Mentoring -->
           <article class="card program-card">
-            <img src="assets/images/class-2.jpg" alt="1-to-1 Culinary Mentoring" class="program-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/class-2.webp" type="image/webp">
+              <img src="assets/images/class-2.jpg" alt="One-to-one culinary mentoring session in a calm domestic kitchen" width="600" height="400" class="program-img" loading="lazy">
+            </picture>
             <div class="program-content">
-              <div class="format-badge">💛 Online &amp; In-Person</div>
-              <h3>1-to-1 Culinary Mentoring</h3>
-              
-              <div class="fridge-banner">
-                <strong>🥕 "Fridge-Friendly" Cooking</strong>
-                No extra shopping needed! We adapt recipes around what you already have to reduce stress.
+              <div class="format-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>Online &amp; In-Person (London)</span>
               </div>
-
+              <h3>1-to-1 Culinary Mentoring</h3>
+              <div class="fridge-banner">
+                <strong>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg>
+                  <span>"Fridge-Friendly" Cooking — No Extra Shopping Needed</span>
+                </strong>
+                For all 1-to-1 sessions, there is no pressure to buy special ingredients. Our chef adapts recipes around what you already have in your fridge and cupboard.
+              </div>
               <div class="pricing-summary" id="pricing-card-1to1">
                 <span>Online: £50 / 60-min session</span>
                 <span>In-Person Home Visit (London): £80 / 1.5-hr session</span>
               </div>
-
-              <button onclick="bookSession('1to1')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Book 1-to-1 Mentoring</button>
+              <button type="button" onclick="bookSession('1to1')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Enquire About 1-to-1 Mentoring</button>
             </div>
           </article>
 
-          <!-- Card 3 -->
+          <!-- Card 3: School & Specialist Workshops -->
           <article class="card program-card">
-            <img src="assets/images/real-school-workshop.jpg" alt="Students plating finished dish with visual step-by-step screen in background" class="program-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/class-3.webp" type="image/webp">
+              <img src="assets/images/class-3.jpg" alt="Structured school cookery workshop with adaptive equipment" width="600" height="400" class="program-img" loading="lazy">
+            </picture>
             <div class="program-content">
-              <div class="format-badge">🏫 London Schools</div>
+              <div class="format-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 8-4 8 4"/><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/><path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4"/></svg>
+                <span>London Schools &amp; Centres</span>
+              </div>
               <h3>School &amp; Specialist Workshops</h3>
-              <p>Tailored on-site culinary sessions designed for SEN schools, alternative provision, and specialist resource bases.</p>
-              
+              <p>Tailored on-site culinary workshops designed for SEN schools, alternative provision, colleges, and specialist resource bases across London.</p>
+              <ul class="feature-list">
+                <li>Delivered by qualified SEN teacher &amp; chef</li>
+                <li>Custom recipe plan for school kitchen setups</li>
+                <li>Full risk assessment &amp; dietary adaptation</li>
+              </ul>
               <div class="pricing-summary" id="pricing-card-school">
                 <span>From £150 / 2-hr workshop</span>
               </div>
-
-              <button onclick="bookSession('school')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Enquire for Schools</button>
+              <button type="button" onclick="bookSession('school')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">Enquire for School Workshops</button>
             </div>
           </article>
-        </div>
-        
-        <div class="trust-banner">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          <strong>Safeguarding &amp; Quality:</strong> All sessions are led by Enhanced DBS checked, Food Hygiene Level 3 certified, and Safeguarding trained SEN specialists.
         </div>
       </div>
     </section>
 
-    <section class="schedule-section" aria-labelledby="schedule-heading">
+    <!-- 4. AVAILABILITY & SCHEDULE SECTION (Items 1, 2, 11, 14) -->
+    <section id="availability" class="schedule-section" aria-labelledby="schedule-heading">
       <div class="container reveal">
         <div class="section-header">
           <h2 id="schedule-heading">Monthly Schedule &amp; Availability</h2>
-          <p>Find a time that works for you. We keep our schedules consistent to support routine building.</p>
+          <p>Consistent weekly windows to support routine building and predictable transitions.</p>
         </div>
 
         <div class="schedule-grid">
           <div class="schedule-card">
-            <h3>🗓️ Weekly Availability Window</h3>
-            <p style="color: var(--color-text-muted);">Available for 1-to-1 sessions, online groups, and introductory calls.</p>
-            <div style="margin-top: var(--space-md);">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              <span>Weekly Availability Window</span>
+            </h3>
+            <p style="color: var(--color-text-muted);">Available for 1-to-1 mentoring sessions and free 15-minute sensory consultations.</p>
+            <div style="margin-top: var(--space-sm);">
               <strong id="availability-days-label">Every Wednesday &amp; Thursday</strong>
               <div id="availability-slots-badges" style="margin-top: 8px;">
                 <span class="time-slot">4:00 – 5:00 PM</span>
@@ -258,13 +341,16 @@
                 <span class="time-slot">6:00 – 7:00 PM</span>
               </div>
             </div>
-            <button onclick="bookSession('1to1')" class="btn btn-secondary" style="width: 100%; margin-top: var(--space-lg);">Request a Wed/Thu Slot</button>
+            <button type="button" onclick="bookSession('1to1')" class="btn btn-secondary" style="width: 100%; margin-top: auto; padding-top: 0.75rem;">Request a Wednesday or Thursday Slot</button>
           </div>
 
           <div class="schedule-card">
-            <h3>👥 Online Group Calendar</h3>
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Online Group Calendar</span>
+            </h3>
             <div class="notice-tag">
-              Dates and seasonal recipes released monthly. Spaces are limited to maintain small, supportive sensory groups.
+              Dates and seasonal recipes are released monthly. Spaces are limited to 4–6 learners to keep groups calm and supportive.
             </div>
             <ul class="feature-list">
               <li><strong>Week 1 – [ADD DATE]:</strong> Sensory Star Cookies</li>
@@ -272,131 +358,219 @@
               <li><strong>Week 3 – [ADD DATE]:</strong> Anna's Easy Bread</li>
             </ul>
             <!-- TODO: Replace data-calendar-url and href below with the real public Google Calendar URL -->
-            <a href="#contact" data-calendar-url="[ADD PUBLIC GOOGLE CALENDAR URL]" onclick="bookSession('group')" class="btn btn-secondary" style="width: 100%; margin-top: var(--space-sm);">View Live Calendar [ADD CALENDAR LINK]</a>
-            <small class="tier-helper" style="text-align: center; margin-top: 0.5rem;">Public calendar link: <code>[ADD PUBLIC GOOGLE CALENDAR URL]</code> (currently scrolls to group enquiry)</small>
+            <a href="#contact" data-calendar-url="[ADD PUBLIC GOOGLE CALENDAR URL]" onclick="bookSession('group')" class="btn btn-secondary" style="width: 100%; margin-top: auto;">View Live Calendar [ADD CALENDAR LINK]</a>
+            <small class="tier-helper" style="text-align: center; margin-top: 0.5rem;">Public calendar URL placeholder: <code>[ADD PUBLIC GOOGLE CALENDAR URL]</code></small>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SEN & Sensory Approach Section -->
+    <!-- 5. SEN & SENSORY APPROACH SECTION (Items 11, 14, 17, 19, 20) -->
     <section id="sen-approach" class="bg-alt" aria-labelledby="approach-heading">
       <div class="container reveal">
         <div class="section-header">
-          <div class="format-badge">🧩 Inclusive &amp; Neuro-Affirming</div>
+          <div class="format-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            <span>Inclusive &amp; Neuro-Affirming</span>
+          </div>
           <h2 id="approach-heading">Our SEN &amp; Sensory Approach</h2>
-          <p>Every learner experiences textures, sounds, and smells differently. Our sessions are built from the ground up to remove anxiety and celebrate small steps toward independence.</p>
+          <p>We support children, young people, and adults with diverse learning profiles—adapting every step so learners feel safe, capable, and respected.</p>
         </div>
 
         <div class="approach-grid">
           <article class="approach-card">
-            <div class="approach-badge" aria-hidden="true">📋</div>
+            <div class="approach-badge" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h6"/></svg>
+            </div>
             <h3>Visual Step-by-Step Symbols</h3>
             <p>Every recipe is broken down into clear, symbol-supported steps so learners know what is happening now and what comes next—reducing cognitive overload.</p>
           </article>
 
           <article class="approach-card">
-            <div class="approach-badge" aria-hidden="true">🖐️</div>
-            <h3>Zero-Pressure Texture Exploration</h3>
-            <p>Whether a learner prefers touching dough directly, using a silicone spatula, or smelling herbs first, we honour their sensory boundaries at all times.</p>
+            <div class="approach-badge" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+            </div>
+            <h3>Gentle Texture Exploration</h3>
+            <p>Whether a learner prefers touching dough directly, using a silicone spatula, or smelling herbs first, there is no pressure to touch anything before they are ready.</p>
           </article>
 
           <article class="approach-card">
-            <div class="approach-badge" aria-hidden="true">🔪</div>
+            <div class="approach-badge" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
             <h3>Adaptive &amp; Safe Equipment</h3>
             <p>We guide families and schools on colour-coded non-slip boards, nylon safety knives, and easy-grip tools that build fine motor confidence safely.</p>
           </article>
 
           <article class="approach-card">
-            <div class="approach-badge" aria-hidden="true">💃</div>
+            <div class="approach-badge" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
             <h3>Movement &amp; Emotional Regulation</h3>
-            <p>Drawing on Cookery Chef Anna’s 25+ years in SEN and Dance Movement Therapy, sessions maintain a calm, rhythmic pace tailored to each student's energy.</p>
+            <p>Drawing on Cookery Chef Anna’s 25+ years in SEN and Dance Movement Therapy, we go at your learner's pace with calm, rhythmic transitions.</p>
           </article>
         </div>
 
         <div style="text-align: center; margin-top: var(--space-lg);">
-          <a href="#contact" class="btn btn-primary" onclick="bookSession('1to1')">Enquire About a Space</a>
+          <a href="?service=consultation#contact" onclick="bookSession('consultation'); return false;" class="btn btn-primary">Book a Free Consultation About Your Learner's Needs</a>
         </div>
       </div>
     </section>
 
-    <!-- Dedicated Photo Gallery Section: Life at Able and Beyond -->
-    <section id="gallery" aria-labelledby="gallery-heading">
+    <!-- 6. TESTIMONIALS & TRUST BAR SECTION (Item 9 — Placeholders Only, Zero Invented Quotes) -->
+    <section id="testimonials" aria-labelledby="testimonials-heading">
       <div class="container reveal">
         <div class="section-header">
-          <div class="format-badge">📸 Real Moments, Real Independence</div>
-          <h2 id="gallery-heading">Life at Able and Beyond — Our Kitchen in Action</h2>
-          <p>Authentic snapshots of our SEN students building culinary skills, exploring sensory ingredients, and sharing proud moments in the kitchen.</p>
+          <h2 id="testimonials-heading">What Families &amp; Schools Say</h2>
+          <p>Feedback from parents, carers, and SEN educators across our cooking sessions.</p>
         </div>
 
-        <!-- Category Filter Tabs -->
-        <div class="gallery-filters" role="tablist" aria-label="Gallery Categories">
-          <button type="button" class="gallery-tab active" role="tab" aria-selected="true" onclick="filterGallery('all', this)">✨ All Moments</button>
-          <button type="button" class="gallery-tab" role="tab" aria-selected="false" onclick="filterGallery('sessions', this)">👩‍🍳 Kitchen Sessions</button>
-          <button type="button" class="gallery-tab" role="tab" aria-selected="false" onclick="filterGallery('sensory', this)">🌱 Sensory Support</button>
-          <button type="button" class="gallery-tab" role="tab" aria-selected="false" onclick="filterGallery('bakes', this)">🍞 Finished Bakes</button>
-        </div>
-
-        <!-- Responsive Image Grid (12px border radius cards with built-in placeholder states) -->
-        <div class="kitchen-gallery-grid" id="kitchen-gallery-grid">
-
-          <!-- Item 1: Dan & Chef Anna (From Dan.HEIC) -->
-          <article class="kitchen-gallery-card" data-category="sensory">
-            <div class="kitchen-gallery-media">
-              <span class="gallery-category-tag">🌱 Sensory Support</span>
-              <div class="gallery-placeholder-state" aria-hidden="true">
-                <div class="gallery-placeholder-icon">📷</div>
-                <strong>Our Team Supporting a Student</strong>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <p class="testimonial-quote">"[ADD REAL TESTIMONIAL 1 — e.g. Parent quote about their child's confidence and enjoyment in the online Sensory Cooking Group.]"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">P1</div>
+              <div>
+                <strong>[ADD PARENT FIRST NAME]</strong>
+                <span style="display: block; font-size: 0.88rem; color: var(--color-text-muted);">Parent of SEN Learner — Online Group</span>
               </div>
-              <img src="assets/images/gallery-dan.jpg" alt="Cookery Chef Anna Maria Racco supporting student Dan as he transfers fresh chopped tomatoes into the saucepan." loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="kitchen-gallery-caption">
-              <h3>Our Team Supporting a Student</h3>
-              <p>Cookery Chef Anna guiding Dan step-by-step while preparing a fresh tomato sauce at the hob.</p>
             </div>
           </article>
 
-          <!-- Item 2: Student Baking Session (Muffin Tin) -->
-          <article class="kitchen-gallery-card" data-category="sessions">
-            <div class="kitchen-gallery-media">
-              <span class="gallery-category-tag">👩‍🍳 Kitchen Sessions</span>
-              <div class="gallery-placeholder-state" aria-hidden="true">
-                <div class="gallery-placeholder-icon">📷</div>
-                <strong>Student Baking Session</strong>
+          <article class="testimonial-card">
+            <p class="testimonial-quote">"[ADD REAL TESTIMONIAL 2 — e.g. Carer quote about how Fridge-Friendly 1-to-1 mentoring helped reduce mealtime and kitchen anxiety.]"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">P2</div>
+              <div>
+                <strong>[ADD PARENT / CARER FIRST NAME]</strong>
+                <span style="display: block; font-size: 0.88rem; color: var(--color-text-muted);">Parent / Carer — 1-to-1 Culinary Mentoring</span>
               </div>
-              <img src="assets/images/gallery-student-baking.jpg" alt="Student in chef apron carefully spooning chocolate batter into a muffin tray." loading="lazy" onerror="this.style.display='none'">
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-quote">"[ADD REAL TESTIMONIAL 3 — e.g. SENDCO or Head of Inclusion quote about a London school workshop or college life-skills programme.]"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">S3</div>
+              <div>
+                <strong>[ADD EDUCATOR FIRST NAME]</strong>
+                <span style="display: block; font-size: 0.88rem; color: var(--color-text-muted);">SENDCO / Inclusion Lead — [ADD SCHOOL / BOROUGH]</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dedicated Trust & Safeguarding Bar (Item 9) -->
+        <div class="trust-banner" role="region" aria-label="Qualifications and Safeguarding Credentials">
+          <div class="trust-pill-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="color: var(--color-primary-dark);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span>Enhanced DBS Checked</span>
+          </div>
+          <div class="trust-pill-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="color: var(--color-primary-dark);"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            <span>Food Hygiene Level 3 Certified</span>
+          </div>
+          <div class="trust-pill-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="color: var(--color-primary-dark);"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>
+            <span>Safeguarding Trained SEN Specialists</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. GALLERY SECTION (Items 4, 11, 14, 16, 20) -->
+    <!-- SAFEGUARDING NOTE: Confirm written consent exists for every learner photo before publishing. Learner first names have been removed from all captions and alt text. -->
+    <section id="gallery" class="bg-alt" aria-labelledby="gallery-heading">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2 id="gallery-heading">Life at Able and Beyond — Our Kitchen in Action</h2>
+          <p>Authentic snapshots of learners building culinary skills, exploring sensory ingredients, and sharing proud moments in the kitchen.</p>
+        </div>
+
+        <!-- Toggle Filter Buttons with aria-pressed (Item 16) -->
+        <div class="gallery-filters" role="group" aria-label="Filter gallery photos by category">
+          <button type="button" class="gallery-tab" aria-pressed="true" onclick="filterGallery('all', this)">All Moments</button>
+          <button type="button" class="gallery-tab" aria-pressed="false" onclick="filterGallery('sessions', this)">Kitchen Sessions</button>
+          <button type="button" class="gallery-tab" aria-pressed="false" onclick="filterGallery('sensory', this)">Sensory Support</button>
+          <button type="button" class="gallery-tab" aria-pressed="false" onclick="filterGallery('bakes', this)">Finished Bakes</button>
+        </div>
+
+        <!-- Responsive Image Grid (Single H3 per card, no duplicate caption text, anonymised learner captions, WebP + JPG fallback) -->
+        <div class="kitchen-gallery-grid" id="kitchen-gallery-grid">
+
+          <!-- Item 1: Team Supporting a Learner (Anonymised from Dan.HEIC per Item 4) -->
+          <article class="kitchen-gallery-card" data-category="sensory">
+            <div class="kitchen-gallery-media">
+              <span class="gallery-category-tag">Sensory Support</span>
+              <div class="gallery-placeholder-state" aria-hidden="true">
+                <div class="gallery-placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
+              </div>
+              <picture>
+                <source srcset="assets/images/gallery-dan.webp" type="image/webp">
+                <img src="assets/images/gallery-dan.jpg" alt="Cookery Chef Anna supporting a learner as they transfer fresh chopped tomatoes into a saucepan." width="480" height="640" loading="lazy" onerror="this.style.display='none'">
+              </picture>
             </div>
             <div class="kitchen-gallery-caption">
-              <h3>Student Baking Session</h3>
-              <p>Practising hand-eye coordination and portion control while spooning rich chocolate mixture into baking trays.</p>
+              <h3>Our Team Supporting a Learner</h3>
+              <p>Cookery Chef Anna guiding a learner step-by-step while preparing a fresh tomato sauce at the hob.</p>
+            </div>
+          </article>
+
+          <!-- Item 2: Student Baking Session -->
+          <article class="kitchen-gallery-card" data-category="sessions">
+            <div class="kitchen-gallery-media">
+              <span class="gallery-category-tag">Kitchen Sessions</span>
+              <div class="gallery-placeholder-state" aria-hidden="true">
+                <div class="gallery-placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
+              </div>
+              <picture>
+                <source srcset="assets/images/gallery-student-baking.webp" type="image/webp">
+                <img src="assets/images/gallery-student-baking.jpg" alt="A learner in a striped apron carefully spooning chocolate batter into a muffin tray." width="240" height="320" loading="lazy" onerror="this.style.display='none'">
+              </picture>
+            </div>
+            <div class="kitchen-gallery-caption">
+              <h3>Learner Baking Session</h3>
+              <p>Practising hand-eye coordination and portion control while spooning chocolate mixture into baking trays.</p>
             </div>
           </article>
 
           <!-- Item 3: Fresh Rosemary & Tomato Focaccia -->
           <article class="kitchen-gallery-card" data-category="bakes">
             <div class="kitchen-gallery-media">
-              <span class="gallery-category-tag">🍞 Finished Bakes</span>
+              <span class="gallery-category-tag">Finished Bakes</span>
               <div class="gallery-placeholder-state" aria-hidden="true">
-                <div class="gallery-placeholder-icon">📷</div>
-                <strong>Finished Sensory Bake</strong>
+                <div class="gallery-placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
               </div>
-              <img src="assets/images/gallery-focaccia.jpg" alt="Golden baked focaccia bread topped with cherry tomatoes, rosemary herbs, olives, and red onion." loading="lazy" onerror="this.style.display='none'">
+              <picture>
+                <source srcset="assets/images/gallery-focaccia.webp" type="image/webp">
+                <img src="assets/images/gallery-focaccia.jpg" alt="Golden baked focaccia bread topped with cherry tomatoes, rosemary herbs, olives, and red onion." width="768" height="1024" loading="lazy" onerror="this.style.display='none'">
+              </picture>
             </div>
             <div class="kitchen-gallery-caption">
               <h3>Sensory Herb &amp; Tomato Focaccia</h3>
-              <p>A wonderful tactile bake—students dimple soft bread dough and press in aromatic rosemary, tomatoes, and olives.</p>
+              <p>A tactile bake where learners dimple soft bread dough and press in aromatic rosemary, tomatoes, and olives.</p>
             </div>
           </article>
 
-          <!-- Item 4: Small Group Kitchen Activity -->
+          <!-- Item 4: Small Group Kitchen Activity (Only instance of real-group-cooking.jpg on the page per Item 16) -->
           <article class="kitchen-gallery-card" data-category="sessions">
             <div class="kitchen-gallery-media">
-              <span class="gallery-category-tag">👩‍🍳 Kitchen Sessions</span>
+              <span class="gallery-category-tag">Kitchen Sessions</span>
               <div class="gallery-placeholder-state" aria-hidden="true">
-                <div class="gallery-placeholder-icon">📷</div>
-                <strong>Small Group Kitchen Activity</strong>
+                <div class="gallery-placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
               </div>
-              <img src="assets/images/real-group-cooking.jpg" alt="Four SEN students seated around a table with green chopping boards and laptop visual instructions." loading="lazy" onerror="this.style.display='none'">
+              <picture>
+                <source srcset="assets/images/real-group-cooking.webp" type="image/webp">
+                <img src="assets/images/real-group-cooking.jpg" alt="Four SEN learners seated around a table with green colour-coded chopping boards and laptop visual instructions." width="480" height="640" loading="lazy" onerror="this.style.display='none'">
+              </picture>
             </div>
             <div class="kitchen-gallery-caption">
               <h3>Small Group Kitchen Activity</h3>
@@ -404,15 +578,19 @@
             </div>
           </article>
 
-          <!-- Item 5: Sensory Cookery Corner (Prep Table & Visual Screen) -->
+          <!-- Item 5: Sensory Cookery Corner -->
           <article class="kitchen-gallery-card" data-category="sensory">
             <div class="kitchen-gallery-media">
-              <span class="gallery-category-tag">🌱 Sensory Support</span>
+              <span class="gallery-category-tag">Sensory Support</span>
               <div class="gallery-placeholder-state" aria-hidden="true">
-                <div class="gallery-placeholder-icon">📷</div>
-                <strong>Sensory Cookery Corner</strong>
+                <div class="gallery-placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
               </div>
-              <img src="assets/images/real-prep-table.jpg" alt="Close-up of sensory vegetable preparation with fresh tomatoes, green beans, mango, and visual recipe laptop." loading="lazy" onerror="this.style.display='none'">
+              <picture>
+                <source srcset="assets/images/real-prep-table.webp" type="image/webp">
+                <img src="assets/images/real-prep-table.jpg" alt="Close-up of sensory vegetable preparation with fresh tomatoes, green beans, mango, and visual recipe laptop." width="480" height="640" loading="lazy" onerror="this.style.display='none'">
+              </picture>
             </div>
             <div class="kitchen-gallery-caption">
               <h3>Sensory Cookery Corner</h3>
@@ -423,12 +601,16 @@
           <!-- Item 6: Balanced Fridge-Friendly Plate -->
           <article class="kitchen-gallery-card" data-category="bakes">
             <div class="kitchen-gallery-media">
-              <span class="gallery-category-tag">🍞 Finished Bakes</span>
+              <span class="gallery-category-tag">Finished Bakes</span>
               <div class="gallery-placeholder-state" aria-hidden="true">
-                <div class="gallery-placeholder-icon">📷</div>
-                <strong>Independent Life Skills Meal</strong>
+                <div class="gallery-placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
               </div>
-              <img src="assets/images/gallery-healthy-toast.jpg" alt="Pink plate with seeded toast topped with sliced boiled egg and herbs, served with apple wedges and almonds." loading="lazy" onerror="this.style.display='none'">
+              <picture>
+                <source srcset="assets/images/gallery-healthy-toast.webp" type="image/webp">
+                <img src="assets/images/gallery-healthy-toast.jpg" alt="Plate with seeded toast topped with sliced boiled egg and herbs, served with apple wedges and almonds." width="768" height="1024" loading="lazy" onerror="this.style.display='none'">
+              </picture>
             </div>
             <div class="kitchen-gallery-caption">
               <h3>Fridge-Friendly Nutritious Plate</h3>
@@ -436,15 +618,19 @@
             </div>
           </article>
 
-          <!-- Item 7: Student Hob & Pan Skills -->
+          <!-- Item 7: Hob & Pan Skills -->
           <article class="kitchen-gallery-card" data-category="sessions">
             <div class="kitchen-gallery-media">
-              <span class="gallery-category-tag">👩‍🍳 Kitchen Sessions</span>
+              <span class="gallery-category-tag">Kitchen Sessions</span>
               <div class="gallery-placeholder-state" aria-hidden="true">
-                <div class="gallery-placeholder-icon">📷</div>
-                <strong>Focused Culinary Mentoring</strong>
+                <div class="gallery-placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
               </div>
-              <img src="assets/images/gallery-student-sauteing.jpg" alt="Student in chef whites focused on sautéing fresh ingredients safely at the stove." loading="lazy" onerror="this.style.display='none'">
+              <picture>
+                <source srcset="assets/images/gallery-student-sauteing.webp" type="image/webp">
+                <img src="assets/images/gallery-student-sauteing.jpg" alt="A learner in chef whites focused on sautéing fresh vegetables safely at the stove." width="240" height="320" loading="lazy" onerror="this.style.display='none'">
+              </picture>
             </div>
             <div class="kitchen-gallery-caption">
               <h3>Building Kitchen Confidence</h3>
@@ -452,35 +638,43 @@
             </div>
           </article>
 
-          <!-- Item 8: Visual Screen & Plating -->
+          <!-- Item 8: Visual Screen & Plating (Only instance of real-school-workshop.jpg on the page per Item 16) -->
           <article class="kitchen-gallery-card" data-category="sensory">
             <div class="kitchen-gallery-media">
-              <span class="gallery-category-tag">🌱 Sensory Support</span>
+              <span class="gallery-category-tag">Sensory Support</span>
               <div class="gallery-placeholder-state" aria-hidden="true">
-                <div class="gallery-placeholder-icon">📷</div>
-                <strong>Visual Recipe Classroom</strong>
+                <div class="gallery-placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
               </div>
-              <img src="assets/images/real-school-workshop.jpg" alt="Two students plating mango chicken curry in front of a large screen displaying the visual recipe." loading="lazy" onerror="this.style.display='none'">
+              <picture>
+                <source srcset="assets/images/real-school-workshop.webp" type="image/webp">
+                <img src="assets/images/real-school-workshop.jpg" alt="Two learners plating mango chicken curry in front of a large screen displaying the step-by-step visual recipe." width="640" height="480" loading="lazy" onerror="this.style.display='none'">
+              </picture>
             </div>
             <div class="kitchen-gallery-caption">
               <h3>Step-by-Step Visual Learning</h3>
-              <p>Students proudly plating their mango chicken curry alongside our large-format visual recipe display.</p>
+              <p>Learners plating their finished mango chicken curry alongside our large-format visual recipe screen.</p>
             </div>
           </article>
 
           <!-- Item 9: Festive Mince Pies -->
           <article class="kitchen-gallery-card" data-category="bakes">
             <div class="kitchen-gallery-media">
-              <span class="gallery-category-tag">🍞 Finished Bakes</span>
+              <span class="gallery-category-tag">Finished Bakes</span>
               <div class="gallery-placeholder-state" aria-hidden="true">
-                <div class="gallery-placeholder-icon">📷</div>
-                <strong>Seasonal Student Bakes</strong>
+                <div class="gallery-placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
               </div>
-              <img src="assets/images/gallery-mince-pies.jpg" alt="Homemade shortcrust mince pies dusted with icing sugar served on a festive snowflake plate." loading="lazy" onerror="this.style.display='none'">
+              <picture>
+                <source srcset="assets/images/gallery-mince-pies.webp" type="image/webp">
+                <img src="assets/images/gallery-mince-pies.jpg" alt="Homemade shortcrust mince pies dusted with icing sugar served on a festive snowflake plate." width="1024" height="768" loading="lazy" onerror="this.style.display='none'">
+              </picture>
             </div>
             <div class="kitchen-gallery-caption">
               <h3>Seasonal Sweet Bakes</h3>
-              <p>Celebrating seasonal traditions with handmade pastry, dusted icing sugar, and proud table presentation.</p>
+              <p>Celebrating seasonal traditions with handmade shortcrust pastry, dusted icing sugar, and table presentation.</p>
             </div>
           </article>
 
@@ -488,74 +682,268 @@
       </div>
     </section>
 
-    <section id="recipes" class="bg-alt" aria-labelledby="recipes-heading" style="padding-top: var(--space-xl);">
+    <!-- 8. OUR TEAM SECTION (Item 12 — Merged Founders + Collapsible Anna Story, <=60-word bios, Lucas framed around SEN teaching) -->
+    <section id="team" aria-labelledby="team-heading">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2 id="team-heading">Our Team</h2>
+          <p>Experienced SEN educators and culinary specialists fostering independence, sensory confidence, and practical life skills.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Card 1: Anna Maria Racco (Max 60 words bio) -->
+          <article class="card founder-card">
+            <picture>
+              <source srcset="assets/images/anna-book.webp" type="image/webp">
+              <img src="assets/images/anna-book.jpg" alt="Cookery Chef Anna Maria Racco smiling and holding her children's book" width="400" height="400" class="founder-img" loading="lazy">
+            </picture>
+            <h3>Cookery Chef Anna Maria Racco</h3>
+            <p class="founder-role">Co-Founder &amp; SEN Cookery Chef</p>
+            <div class="cred-badges">
+              <span class="cred-pill">25+ Yrs SEN &amp; PMLD Specialist</span>
+              <span class="cred-pill">Dance Movement Therapist</span>
+              <span class="cred-pill">College Culinary Educator</span>
+            </div>
+            <p>Italian chef, trained Dance Movement Therapist, and SEN educator with over 25 years of experience supporting children, young people, and adults—including learners with PMLD. Anna teaches at Capital City College Group in London and leads our sensory-friendly recipes and mentoring sessions.</p>
+          </article>
+
+          <!-- Card 2: Lucas Rambourg (Max 60 words bio, framed around SEN teaching experience) -->
+          <article class="card founder-card">
+            <picture>
+              <source srcset="assets/images/lucas.webp" type="image/webp">
+              <img src="assets/images/lucas.jpg" alt="Lucas Rambourg, Co-Founder and Specialist SEN Teacher" width="400" height="400" class="founder-img" loading="lazy">
+            </picture>
+            <h3>Lucas Rambourg</h3>
+            <p class="founder-role">Co-Founder &amp; Specialist SEN Educator</p>
+            <div class="cred-badges">
+              <span class="cred-pill">14+ Yrs SEN Classroom &amp; 1-to-1 Teacher</span>
+              <span class="cred-pill">Accessible Curriculum Design</span>
+            </div>
+            <p>Specialist SEN teacher and 1-to-1 tutor with over 14 years of experience supporting neurodivergent learners across classrooms and home settings. Lucas shapes our visual learning resources, structured routines, and family communication so every learner feels prepared and supported.</p>
+          </article>
+        </div>
+
+        <!-- Collapsible "Read Anna's story" (Item 12) -->
+        <details class="anna-story-details">
+          <summary>
+            <span>Read Anna's Full Story &amp; Children's Book (<em>The Eagle and the Parakeets</em>)</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="anna-story-content">
+            <div>
+              <h3>From My Grandmother's Kitchen in Italy to Inclusive London Classrooms</h3>
+              <p>I grew up in Italy in a home where cooking was part of everyday life and joy. Experimenting beside my grandmother, I discovered flavours, textures, and the tactile pleasure of creating something with my hands—a traditional foundation that still guides my teaching today.</p>
+              <p>Moving to London in 1986, I trained as a Dance Movement Therapist and spent over 25 years working with SEN children and adults across schools, colleges, nursing homes, and hospitals. I combine movement, sensory regulation, and kitchen creativity to help learners connect with their bodies and build motor confidence.</p>
+              <p>Specialising in inclusive education, I teach cookery and essential life skills to both mainstream and SEN audiences, including learners with PMLD (Profound and Multiple Learning Disabilities), at Capital City College Group in London.</p>
+              <h4 style="margin-top: var(--space-sm);">Author of <em>The Eagle and the Parakeets</em></h4>
+              <p style="margin-bottom: 0;">Beyond the kitchen, Anna is the author of the children's book <em>The Eagle and the Parakeets</em>, weaving themes of inclusivity, bravery, and friendship that reflect the values she brings to every cooking session.</p>
+            </div>
+            <div>
+              <!-- NOTE: Flagged per Item 16 — replace with a second distinct portrait of Anna or book cover photo when available [PHOTO NEEDED] -->
+              <div class="notice-tag" style="margin-bottom: 0;">
+                <strong> Culinary &amp; Therapeutic Philosophy:</strong>
+                <p style="margin-top: 0.4rem; margin-bottom: 0;">"Cooking is not just about following a recipe—it is about rhythm, sensory comfort, and celebrating what each learner can do at their own pace."</p>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 9. VISUAL RECIPE HUB + NEWSLETTER SIGN-UP (Items 11, 17, 22) -->
+    <section id="recipes" class="bg-alt" aria-labelledby="recipes-heading">
       <div class="container reveal">
         <div class="section-header">
           <h2 id="recipes-heading">Visual Recipe Hub</h2>
-          <p>Step-by-step, sensory-friendly recipes with clear symbols to help you cook independently.</p>
+          <p>Free step-by-step, print-friendly visual recipes with clear symbols to practice independent cooking at home.</p>
         </div>
 
         <div class="grid">
           <!-- Recipe 1 -->
           <article class="card program-card">
-            <img src="assets/images/fun-cookies.jpg" alt="Sensory Star Cookies" class="program-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/fun-cookies.webp" type="image/webp">
+              <img src="assets/images/fun-cookies.jpg" alt="Plate of colourful baked Sensory Star Cookies" width="600" height="400" class="program-img" loading="lazy">
+            </picture>
             <div class="program-content">
               <h3>Sensory Star Cookies</h3>
-              <p>Fun, colourful, and easy to make! A great recipe for practicing mixing and shape cutting.</p>
-              <a href="recipe-cookies.html" class="btn btn-primary" style="margin-top: var(--space-md); width: 100%;">View Recipe ✨</a>
+              <p>Fun, colourful, and gentle to make—a great recipe for practising mixing, rolling, and shape cutting.</p>
+              <a href="recipe-cookies.html" class="btn btn-primary" style="margin-top: auto; width: 100%;">View the Sensory Star Cookies Recipe</a>
             </div>
           </article>
 
           <!-- Recipe 2 -->
           <article class="card program-card">
-            <img src="assets/images/heart-pie.jpg" alt="Heart Lattice Pie" class="program-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/heart-pie.webp" type="image/webp">
+              <img src="assets/images/heart-pie.jpg" alt="Rustic Heart Lattice Pie with cherry filling" width="600" height="400" class="program-img" loading="lazy">
+            </picture>
             <div class="program-content">
               <h3>Heart Lattice Pie</h3>
-              <p>A beautiful rustic pie with a bright red filling. Step-by-step guide to making the perfect lattice top.</p>
-              <a href="recipe-pie.html" class="btn btn-primary" style="margin-top: var(--space-md); width: 100%;">View Recipe ❤️</a>
+              <p>A rustic fruit pie with a bright cherry filling and a step-by-step guide to weaving a pastry lattice top.</p>
+              <a href="recipe-pie.html" class="btn btn-primary" style="margin-top: auto; width: 100%;">View the Heart Lattice Pie Recipe</a>
             </div>
           </article>
 
           <!-- Recipe 3 -->
           <article class="card program-card">
-            <img src="assets/images/anna-kneading.jpg" alt="Anna's Easy Bread" class="program-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/anna-kneading.webp" type="image/webp">
+              <img src="assets/images/anna-kneading.jpg" alt="Cookery Chef Anna kneading fresh bread dough" width="600" height="400" class="program-img" loading="lazy">
+            </picture>
             <div class="program-content">
               <h3>Anna's Easy Bread</h3>
-              <p>Get your hands messy and feel the dough! A wonderful tactile recipe for making fresh bread.</p>
-              <a href="recipe-bread.html" class="btn btn-primary" style="margin-top: var(--space-md); width: 100%;">View Recipe 🍞</a>
+              <p>A wonderful rhythmic, tactile recipe for exploring warm dough and baking a fresh loaf at home.</p>
+              <a href="recipe-bread.html" class="btn btn-primary" style="margin-top: auto; width: 100%;">View the Anna's Easy Bread Recipe</a>
             </div>
           </article>
+        </div>
+
+        <!-- Email Sign-Up for New Visual Recipes (Item 22) -->
+        <div class="newsletter-box">
+          <h3>Get New Visual Recipes by Email</h3>
+          <p style="color: var(--color-text-muted); margin-bottom: 0.5rem;">Receive a free printable symbol recipe sheet once a month. Unsubscribe at any time.</p>
+          <!-- TODO: Replace action with your newsletter provider endpoint [ADD NEWSLETTER ENDPOINT] -->
+          <form id="newsletter-form" class="newsletter-form" action="[ADD NEWSLETTER ENDPOINT]" method="post">
+            <label for="newsletter-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0);">Your Email Address</label>
+            <input type="email" id="newsletter-email" name="email" autocomplete="email" required placeholder="Enter your email address">
+            <button type="submit" class="btn btn-primary">Send Me Free Visual Recipes</button>
+          </form>
+          <p id="newsletter-feedback" role="status" aria-live="polite" style="display: none; color: var(--color-success); font-weight: 700; margin-top: 0.75rem; margin-bottom: 0;">Thank you! You are subscribed to our monthly visual recipe sheets.</p>
         </div>
       </div>
     </section>
 
-    <section id="contact" aria-labelledby="contact-heading" style="margin-top: var(--space-xl);">
+    <!-- 10. ACCESSIBLE FAQ ACCORDION SECTION (Items 10 & 11) -->
+    <section id="faq" aria-labelledby="faq-heading">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <p>Clear answers to help you decide whether our sessions are right for your learner or school.</p>
+        </div>
+
+        <div class="faq-container">
+          <!-- Q1 -->
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1">
+                <span>What technology do we need for online sessions?</span>
+                <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-1" class="faq-panel" role="region" aria-labelledby="faq-btn-1" hidden>
+              <p>You only need a laptop, tablet, or phone with an internet connection and Zoom (or Microsoft Teams on request) placed safely on a kitchen counter where the learner can see the screen. We email a printable visual symbol sheet before every session so you can also follow along on paper.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
+                <span>Does my child or learner need to have their camera on?</span>
+                <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-2" class="faq-panel" role="region" aria-labelledby="faq-btn-2" hidden>
+              <p>No—cameras and microphones are completely optional in our group sessions. Many learners prefer to watch with their camera off or angle the camera only at their chopping board and hands rather than their face. For 1-to-1 sessions, angling the camera toward the worktop helps our chef give safe kitchen guidance. <em>[CONFIRM IF CAMERA-ON WORKTOP VIEW IS REQUIRED FOR SAFETY IN 1-TO-1]</em></p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
+                <span>Which ages and needs do you support?</span>
+                <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-3" class="faq-panel" role="region" aria-labelledby="faq-btn-3" hidden>
+              <p>We support children (from age 6+), teenagers, young people, and adults across a wide range of learning and sensory profiles, including Autism, ADHD, Dyspraxia, Down syndrome, speech and language differences, and PMLD (Profound and Multiple Learning Disabilities). <em>[CONFIRM EXACT MINIMUM AGE FOR ONLINE GROUPS]</em></p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4">
+                <span>What if my learner doesn't want to join in on the day?</span>
+                <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-4" class="faq-panel" role="region" aria-labelledby="faq-btn-4" hidden>
+              <p>We go at your learner's pace with no pressure. If they prefer to simply watch, smell one ingredient, or take a break while a parent or carer continues, that is warmly welcomed. Every small interaction with food counts as progress.</p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5">
+                <span>Do I (the parent or carer) need to be present during the session?</span>
+                <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-5" class="faq-panel" role="region" aria-labelledby="faq-btn-5" hidden>
+              <p>Yes—for all online sessions, a responsible adult must remain in the kitchen or within immediate reach to supervise oven, hob, and sharp-tool safety. For in-person London home visits, a parent or carer must also remain on the premises throughout the visit. <em>[CONFIRM SUPERVISION POLICY]</em></p>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-6" id="faq-btn-6">
+                <span>What is your cancellation and rescheduling policy?</span>
+                <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-6" class="faq-panel" role="region" aria-labelledby="faq-btn-6" hidden>
+              <p>We understand that health and sensory regulation needs can change unexpectedly. Sessions can be rescheduled or cancelled with at least 24 hours' notice at no charge. <em>[CONFIRM NOTICE PERIOD &amp; REFUND TERMS FOR ILLNESS/EMERGENCIES]</em></p>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-7" id="faq-btn-7">
+                <span>Can sessions be funded through direct payments, EOTAS, or personal budgets?</span>
+                <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-7" class="faq-panel" role="region" aria-labelledby="faq-btn-7" hidden>
+              <p>Yes, we can provide itemised invoices and session summaries aligned with EHCP life-skills and independence outcomes for families using Local Authority Direct Payments, Personal Budgets, or EOTAS packages, as well as school purchase orders. <em>[CONFIRM INVOICING &amp; LOCAL AUTHORITY PROVIDER STATUS]</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. ENQUIRY FORM SECTION (Items 3, 6, 11, 13, 20) -->
+    <section id="contact" class="bg-alt" aria-labelledby="contact-heading">
       <div class="container reveal">
         <div class="contact-wrapper">
           <div class="contact-info">
-            <div class="format-badge">✉️ Friendly, No-Obligation Enquiry</div>
-            <h2 id="contact-heading">Enquire About a Space</h2>
-            <p style="font-size: 1.125rem; color: var(--color-text-muted);">Are you a parent, carer, or school looking to book an introductory session? Fill out our simple form and we'll get back to you within 24 hours.</p>
+            <div class="format-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Friendly, No-Obligation Enquiry</span>
+            </div>
+            <h2 id="contact-heading">Book a Free Consultation or Enquire</h2>
+            <p style="font-size: 1.125rem; color: var(--color-text-muted);">Whether you are a parent, carer, adult learner, or school SENDCO, complete our short form below and we will reply within 24 hours.</p>
+            <ul class="feature-list" style="margin-top: var(--space-md);">
+              <li>No payment is taken when you submit this form</li>
+              <li>Speak directly with Cookery Chef Anna or Lucas</li>
+              <li>Confidential, tailored advice for your learner</li>
+            </ul>
           </div>
 
-          <form id="booking-form" class="contact-form" aria-label="Booking and Inquiry Form">
-            <div id="form-helper" class="form-context-badge">
-              <span id="form-helper-text">✨ Select your program below to customize your inquiry</span>
+          <form id="booking-form" class="contact-form" aria-label="Consultation and Booking Enquiry Form" novalidate>
+            <div id="form-helper" class="form-context-badge" aria-live="polite">
+              <span id="form-helper-text"><strong>Free 15-Min Sensory Consultation:</strong> A friendly, no-obligation chat to discuss sensory preferences, routines, and goals.</span>
             </div>
 
             <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required placeholder="e.g. Sarah Jenkins">
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required placeholder="e.g. sarah@example.com">
-            </div>
-
-            <div class="form-group">
-              <label for="interest">Selected Programme / Service:</label>
-              <select id="interest" name="interest" onchange="updateDynamicFields(this.value)">
+              <label for="interest">What would you like to enquire about? <span class="required-star" aria-hidden="true">*</span></label>
+              <select id="interest" name="interest" onchange="updateDynamicFields(this.value)" required>
+                <option value="consultation">Free 15-Min Sensory Consultation — Speak with Cookery Chef Anna first (£0)</option>
                 <option value="group">Sensory Cooking Groups — £20 / 60-min session or £85 for 5-week pass (Save £15)</option>
                 <option value="1to1">1-to-1 Culinary Mentoring — Online: £50 / 60-min session | In-Person Home Visit (London): £80 / 1.5-hr session</option>
                 <option value="school">School &amp; Specialist Workshops — From £150 / 2-hr workshop</option>
@@ -563,9 +951,26 @@
               </select>
             </div>
 
-            <!-- Dynamic Weekly Slot Selector (Shared for Group & 1-to-1) -->
-            <div id="field-group" class="form-group" style="display: none;">
-              <label for="group-slot">Preferred Weekly Availability Slot (Wed / Thu, 4:00 – 7:00 PM):</label>
+            <div class="form-group">
+              <label for="name">Your Full Name <span class="required-star" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="error-name" placeholder="e.g. Sarah Jenkins">
+              <span id="error-name" class="field-error" role="alert">Please enter your full name.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required-star" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="error-email" placeholder="e.g. sarah@example.co.uk">
+              <span id="error-email" class="field-error" role="alert">Please enter a valid email address so we can reply to you.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone or WhatsApp Number <span style="font-weight: normal; color: var(--color-text-muted);">(Optional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000">
+            </div>
+
+            <!-- Dynamic Weekly Slot Selector (Shown ONLY for 1-to-1 and Consultation per Item 13) -->
+            <div id="field-slot" class="form-group">
+              <label for="group-slot">Preferred Weekly Time Slot (Wed / Thu, 4:00 – 7:00 PM):</label>
               <select id="group-slot" name="group-slot">
                 <option value="wed-4pm">Wednesday 4:00 PM – 5:00 PM</option>
                 <option value="wed-5pm">Wednesday 5:00 PM – 6:00 PM</option>
@@ -574,33 +979,48 @@
                 <option value="thu-5pm">Thursday 5:00 PM – 6:00 PM</option>
                 <option value="thu-6pm">Thursday 6:00 PM – 7:00 PM</option>
               </select>
-              <small class="tier-helper">🥕 Small groups (4–6 learners max). Visual ingredient checklist sent in advance.</small>
             </div>
 
-            <!-- Dynamic 1-to-1 Field -->
-            <div id="field-1to1" class="form-group" style="display: none;">
-              <label for="sensory-notes">Learner Profile &amp; Sensory Preferences:</label>
-              <textarea id="sensory-notes" name="sensory-notes" rows="3" placeholder="Tell us about food likes, sensory aversions (e.g. wet textures, loud sounds), or specific EHCP goals..."></textarea>
-              <label style="display: flex; align-items: center; gap: 8px; margin-top: 8px; font-weight: normal; cursor: pointer;">
-                <input type="checkbox" id="free-consultation" name="free-consultation" checked style="width: auto;">
-                <span>Request a <strong>Free 15-Minute Sensory Consultation</strong> with Cookery Chef Anna first</span>
-              </label>
-              <small class="tier-helper">🥘 Fridge-friendly guarantee: No pressure to buy special ingredients!</small>
+            <!-- Dynamic 1-to-1 & Consultation Sensory Field (Items 3 & 13) -->
+            <div id="field-1to1" class="form-group">
+              <label for="sensory-notes">Learner Profile &amp; Sensory Preferences <span style="font-weight: normal; color: var(--color-text-muted);">(Optional)</span></label>
+              <textarea id="sensory-notes" name="sensory-notes" rows="3" aria-describedby="sensory-confidential-note" placeholder="Tell us about favourite foods, sensory preferences (e.g. prefers dry textures, quiet environment), or EHCP goals..."></textarea>
+              <small id="sensory-confidential-note" class="tier-helper"><strong>Confidentiality reassurance:</strong> This stays confidential and is only used to prepare your session.</small>
             </div>
 
-            <!-- Dynamic School Field -->
+            <!-- Dynamic School Field (Shown ONLY when school option is selected per Item 13) -->
             <div id="field-school" class="form-group" style="display: none;">
-              <label for="school-name">School / Organisation Name &amp; Borough:</label>
-              <input type="text" id="school-name" name="school-name" placeholder="e.g. Highfield Specialist Resource Base, Camden">
-              <small class="tier-helper">📋 Full DBS, Food Hygiene Level 3 certification, and risk assessments included.</small>
+              <label for="school-name">School / Organisation Name &amp; Borough <span class="required-star" aria-hidden="true">*</span></label>
+              <input type="text" id="school-name" name="school-name" autocomplete="organization" aria-describedby="error-school" placeholder="e.g. Highfield Specialist Resource Base, Camden">
+              <span id="error-school" class="field-error" role="alert">Please enter your school or organisation name.</span>
+              <small class="tier-helper">Full Enhanced DBS, Food Hygiene Level 3 certification, and written risk assessments are included.</small>
             </div>
 
             <div class="form-group">
-              <label for="message">Additional Message (Optional)</label>
+              <label for="message">Additional Questions or Notes <span style="font-weight: normal; color: var(--color-text-muted);">(Optional)</span></label>
               <textarea id="message" name="message" rows="3" placeholder="Any questions or specific dates you have in mind?"></textarea>
             </div>
 
-            <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%; margin-top: var(--space-xs);">Enquire About a Space</button>
+            <!-- Required Privacy & Consent Checkbox (Item 3) -->
+            <div class="form-group">
+              <label for="privacy-consent" class="consent-checkbox-label">
+                <input type="checkbox" id="privacy-consent" name="privacy-consent" required aria-describedby="error-consent">
+                <span>I consent to Able and Beyond storing my details to respond to this enquiry, in accordance with the <a href="privacy-policy.html">Privacy Policy</a>. <span class="required-star" aria-hidden="true">*</span></span>
+              </label>
+              <span id="error-consent" class="field-error" role="alert">Please tick the consent box so we can reply to your enquiry.</span>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">Book Free 15-Min Consultation</button>
+
+            <!-- Accessible Success Banner (Item 13) -->
+            <div id="form-success-banner" class="form-success-state" role="status" aria-live="polite" tabindex="-1">
+              Thank you, we'll reply within 24 hours.
+            </div>
+
+            <!-- Data Use, Access & Retention Note (Item 3) -->
+            <div class="privacy-reassurance-box">
+              <strong>How we protect your data:</strong> Your information is used solely to answer your enquiry and tailor your cooking session. It is only seen by our co-founders (Anna Maria Racco and Lucas Rambourg), is never shared with third parties, and is deleted within 12 months if you choose not to book. Read our full <a href="privacy-policy.html">Privacy Policy</a>.
+            </div>
           </form>
         </div>
       </div>
@@ -608,181 +1028,67 @@
 
   </main>
 
-  <script>
-    // Single Source of Truth for Pricing & Availability (prevents drift across cards, availability & form)
-    const SITE_PRICING_DATA = {
-      availability: {
-        daysLabel: 'Every Wednesday & Thursday',
-        timeWindows: ['4:00 – 5:00 PM', '5:00 – 6:00 PM', '6:00 – 7:00 PM'],
-        slots: [
-          { value: 'wed-4pm', label: 'Wednesday 4:00 PM – 5:00 PM' },
-          { value: 'wed-5pm', label: 'Wednesday 5:00 PM – 6:00 PM' },
-          { value: 'wed-6pm', label: 'Wednesday 6:00 PM – 7:00 PM' },
-          { value: 'thu-4pm', label: 'Thursday 4:00 PM – 5:00 PM' },
-          { value: 'thu-5pm', label: 'Thursday 5:00 PM – 6:00 PM' },
-          { value: 'thu-6pm', label: 'Thursday 6:00 PM – 7:00 PM' }
-        ]
-      },
-      programmes: {
-        group: {
-          title: 'Sensory Cooking Groups',
-          lines: [
-            { text: '£20 / 60-min session', muted: false },
-            { text: '£85 for 5-week pass <strong>(Save £15)</strong>', muted: true }
-          ],
-          dropdownLabel: 'Sensory Cooking Groups — £20 / 60-min session or £85 for 5-week pass (Save £15)',
-          helperHtml: '💻 <strong>Sensory Cooking Groups:</strong> £20 / 60-min session or £85 for 5-week pass (Save £15). Friendly groups (4–6 max).',
-          ctaText: 'Enquire About a Group Space'
-        },
-        '1to1': {
-          title: '1-to-1 Culinary Mentoring',
-          lines: [
-            { text: 'Online: £50 / 60-min session', muted: false },
-            { text: 'In-Person Home Visit (London): £80 / 1.5-hr session', muted: false }
-          ],
-          dropdownLabel: '1-to-1 Culinary Mentoring — Online: £50 / 60-min session | In-Person Home Visit (London): £80 / 1.5-hr session',
-          helperHtml: '🥕 <strong>1-to-1 Culinary Mentoring:</strong> Online: £50 / 60-min session | In-Person Home Visit (London): £80 / 1.5-hr session.',
-          ctaText: 'Request 1-to-1 Mentoring Call'
-        },
-        school: {
-          title: 'School & Specialist Workshops',
-          lines: [
-            { text: 'From £150 / 2-hr workshop', muted: false }
-          ],
-          dropdownLabel: 'School & Specialist Workshops — From £150 / 2-hr workshop',
-          helperHtml: '🏫 <strong>School &amp; Specialist Workshops:</strong> From £150 / 2-hr workshop with complete risk assessment.',
-          ctaText: 'Request School Workshop Pack'
-        },
-        other: {
-          title: 'General Enquiry & Advice',
-          lines: [],
-          dropdownLabel: 'General Enquiry & Advice',
-          helperHtml: '✨ <strong>General Enquiry:</strong> Ask us any questions about our inclusive culinary curriculum.',
-          ctaText: 'Enquire About a Space'
-        }
-      }
-    };
-
-    function renderPricingAndAvailability() {
-      // 1. Render Programme Card Pricing Summaries
-      ['group', '1to1', 'school'].forEach(key => {
-        const container = document.getElementById('pricing-card-' + key);
-        const prog = SITE_PRICING_DATA.programmes[key];
-        if (container && prog) {
-          container.innerHTML = prog.lines.map(line =>
-            line.muted
-              ? `<span style="color: var(--color-text-muted); font-weight: normal;">${line.text}</span>`
-              : `<span>${line.text}</span>`
-          ).join('');
-        }
-      });
-
-      // 2. Render Availability Card Days & Time Window Badges
-      const daysEl = document.getElementById('availability-days-label');
-      if (daysEl) {
-        daysEl.textContent = SITE_PRICING_DATA.availability.daysLabel;
-      }
-      const badgesEl = document.getElementById('availability-slots-badges');
-      if (badgesEl) {
-        badgesEl.innerHTML = SITE_PRICING_DATA.availability.timeWindows
-          .map(win => `<span class="time-slot">${win}</span>`)
-          .join('');
-      }
-
-      // 3. Render Form Programme Dropdown
-      const interestSelect = document.getElementById('interest');
-      if (interestSelect) {
-        const currentVal = interestSelect.value || 'group';
-        interestSelect.innerHTML = Object.keys(SITE_PRICING_DATA.programmes).map(key => {
-          const prog = SITE_PRICING_DATA.programmes[key];
-          return `<option value="${key}">${prog.dropdownLabel}</option>`;
-        }).join('');
-        interestSelect.value = currentVal;
-      }
-
-      // 4. Render Form Weekly Time Slot Dropdown
-      const slotSelect = document.getElementById('group-slot');
-      if (slotSelect) {
-        slotSelect.innerHTML = SITE_PRICING_DATA.availability.slots
-          .map(slot => `<option value="${slot.value}">${slot.label}</option>`)
-          .join('');
-      }
-    }
-
-    function filterGallery(category, activeBtn) {
-      const tabs = document.querySelectorAll('.gallery-tab');
-      tabs.forEach(tab => {
-        tab.classList.remove('active');
-        tab.setAttribute('aria-selected', 'false');
-      });
-      if (activeBtn) {
-        activeBtn.classList.add('active');
-        activeBtn.setAttribute('aria-selected', 'true');
-      }
-
-      const cards = document.querySelectorAll('.kitchen-gallery-card');
-      cards.forEach(card => {
-        const itemCat = card.getAttribute('data-category');
-        if (category === 'all' || itemCat === category) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    function updateDynamicFields(type) {
-      const helperText = document.getElementById('form-helper-text');
-      const groupDiv = document.getElementById('field-group');
-      const oneToOneDiv = document.getElementById('field-1to1');
-      const schoolDiv = document.getElementById('field-school');
-      const submitBtn = document.getElementById('submit-btn');
-
-      if (!groupDiv || !oneToOneDiv || !schoolDiv) return;
-
-      groupDiv.style.display = 'none';
-      oneToOneDiv.style.display = 'none';
-      schoolDiv.style.display = 'none';
-
-      const prog = SITE_PRICING_DATA.programmes[type] || SITE_PRICING_DATA.programmes.other;
-      helperText.innerHTML = prog.helperHtml;
-      submitBtn.textContent = prog.ctaText;
-
-      if (type === 'group') {
-        groupDiv.style.display = 'block';
-      } else if (type === '1to1') {
-        groupDiv.style.display = 'block';
-        oneToOneDiv.style.display = 'block';
-      } else if (type === 'school') {
-        schoolDiv.style.display = 'block';
-      }
-    }
-
-    function bookSession(type) {
-      const select = document.getElementById('interest');
-      if (select) {
-        select.value = type;
-        updateDynamicFields(type);
-      }
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
-    // Initialize on load
-    document.addEventListener('DOMContentLoaded', () => {
-      renderPricingAndAvailability();
-      const select = document.getElementById('interest');
-      if (select) {
-        updateDynamicFields(select.value);
-      }
-    });
-  </script>
-
+  <!-- 12. REAL MULTI-COLUMN FOOTER (Item 21) -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Able and Beyond SEN Cookery School. All rights reserved.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Able and Beyond</h3>
+          <p>Inclusive online and London in-person cookery school empowering SEN children, young people, and adults through practical, sensory-friendly culinary education.</p>
+          <p style="margin-bottom: 0;">
+            <strong>Email:</strong> <code>[ADD OFFICIAL CONTACT EMAIL]</code><br>
+            <strong>Phone / WhatsApp:</strong> <code>[ADD OFFICIAL PHONE NUMBER]</code><br>
+            <strong>Location:</strong> London, UK &amp; Online (UK-wide)
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#programs">Programmes &amp; Prices</a></li>
+            <li><a href="#availability">Schedule &amp; Availability</a></li>
+            <li><a href="#sen-approach">Our SEN Approach</a></li>
+            <li><a href="#gallery">Our Kitchen in Action</a></li>
+            <li><a href="#recipes">Visual Recipe Hub</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Policies &amp; Safeguarding</h3>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
+            <li><a href="#faq">Cancellation Terms (24-hr notice)</a></li>
+          </ul>
+          <p style="margin-top: 0.75rem; font-size: 0.88rem;">
+            <strong>Credentials &amp; Registration:</strong><br>
+            Enhanced DBS Checked Educators<br>
+            Level 3 Award in Food Safety &amp; Hygiene<br>
+            Public Liability Insurance: <code>[ADD INSURER &amp; POLICY NO.]</code><br>
+            Registration / ICO: <code>[ADD COMPANY / ICO DETAILS]</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Connect With Us</h3>
+          <ul class="footer-links">
+            <li><a href="#contact" data-social="[ADD INSTAGRAM URL]">Instagram <code>[ADD LINK]</code></a></li>
+            <li><a href="#contact" data-social="[ADD FACEBOOK URL]">Facebook <code>[ADD LINK]</code></a></li>
+            <li><a href="#contact" data-social="[ADD LINKEDIN URL]">LinkedIn <code>[ADD LINK]</code></a></li>
+            <li><a href="#contact" data-social="[ADD YOUTUBE URL]">YouTube Visual Recipes <code>[ADD LINK]</code></a></li>
+          </ul>
+          <div style="margin-top: 1rem;">
+            <a href="#top" class="btn btn-secondary" style="min-height: 44px; padding: 0.5rem 1.1rem; font-size: 0.95rem;">↑ Back to Top</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Able and Beyond SEN Cookery School. All rights reserved.</span>
+        <span>Designed to meet WCAG 2.2 AA Accessibility Standards.</span>
+      </div>
     </div>
   </footer>
 

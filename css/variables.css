@@ -1,36 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* SEN-Friendly Calm & Accessible Palette */
+  /* SEN-Friendly Calm & WCAG 2.2 AA Audited Palette */
   --color-bg: #FCF9F2; /* Warm cream background */
   --color-surface: #FFFFFF;
-  --color-primary: #7FA989; /* Soft sage green */
-  --color-primary-dark: #4F7759; /* High-contrast sage for buttons/accents */
+  --color-primary: #457351; /* Accessible sage green (5.4:1 with white) */
+  --color-primary-dark: #2F593A; /* Deep forest sage (8.1:1 with white, 6.5:1 on primary-light) */
   --color-primary-light: #EAF2EC; /* Gentle sage tint */
   --color-secondary: #F3E5D0; /* Warm oat / sandy beige */
-  --color-accent: #C86D51; /* Earthy terracotta accent (WCAG AA compliant) */
+  --color-accent: #A64B2A; /* Earthy terracotta accent (5.7:1 on white/cream - WCAG AA pass) */
   --color-accent-light: #FBECE7;
-  
-  --color-text-main: #1B2A4A; /* Deep navy text for superior readability & calm contrast */
-  --color-text-muted: #4A5B7C; /* Soft slate navy */
-  --color-border: #E5E0D5;
-  --color-focus: #4F7759;
+  --color-error: #B42318; /* Accessible error red (6.5:1 on white) */
+  --color-error-bg: #FEF3F2;
+  --color-success: #1F5E3B;
+  --color-success-bg: #ECFDF3;
 
-  /* Clean, Rounded, Legible Typography */
-  --font-family-base: 'Nunito', 'Inter', sans-serif;
+  --color-text-main: #1B2A4A; /* Deep navy text (13.2:1 on cream, 14.1:1 on white) */
+  --color-text-muted: #3D4E6D; /* Slate navy (7.8:1 on white, 6.8:1 on primary-light) */
+  --color-border: #D8D2C5;
+  --color-focus: #1B2A4A;
+
+  /* Clean, Rounded, Legible Typography & Type Scale */
+  --font-family-base: 'Nunito', 'Inter', system-ui, -apple-system, sans-serif;
   --font-family-dyslexia: 'OpenDyslexic', 'Comic Sans MS', sans-serif;
-  
+
+  --font-size-xs: 0.875rem;
+  --font-size-sm: 0.95rem;
   --font-size-base: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: clamp(2.1rem, 4vw, 3.25rem);
+
   --line-height-base: 1.65;
   --letter-spacing-base: 0.015em;
+  --word-spacing-base: normal;
 
-  /* Spacing */
+  /* Spacing Scale */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
   --space-xl: 4rem;
-  --space-xxl: 6rem;
+  --space-xxl: 5.5rem;
 
   /* Soft Organic Radii (12px standard for gallery & inputs) */
   --radius-sm: 12px;
@@ -42,17 +54,88 @@
   --shadow-sm: 0 4px 14px rgba(27, 42, 74, 0.06);
   --shadow-md: 0 10px 28px rgba(27, 42, 74, 0.09);
   --shadow-hover: 0 16px 36px rgba(27, 42, 74, 0.14);
-  
+
   /* Transitions */
-  --transition-smooth: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Sticky Header Offset */
+  --header-offset: 92px;
 }
 
-/* Dyslexia Mode Overrides */
+/* Accessibility Panel Overrides */
+body.text-size-lg {
+  --font-size-base: 1.25rem;
+  --font-size-sm: 1.05rem;
+  --font-size-lg: 1.4rem;
+}
+
+body.text-size-xl {
+  --font-size-base: 1.375rem;
+  --font-size-sm: 1.15rem;
+  --font-size-lg: 1.55rem;
+}
+
+body.wide-spacing {
+  --line-height-base: 1.95;
+  --letter-spacing-base: 0.06em;
+  --word-spacing-base: 0.12em;
+}
+
 body.dyslexia-mode {
   --font-family-base: var(--font-family-dyslexia);
   --line-height-base: 1.85;
   --letter-spacing-base: 0.05em;
-  --color-bg: #FDF9E7; 
+  --color-bg: #FDF9E7;
   --color-surface: #FFFDF4;
   --color-text-main: #142038;
+}
+
+body.high-contrast {
+  --color-bg: #FFFFFF;
+  --color-surface: #FFFFFF;
+  --color-primary: #143D22;
+  --color-primary-dark: #0D2916;
+  --color-primary-light: #E6F0E9;
+  --color-secondary: #EFEFEF;
+  --color-accent: #7A2E14;
+  --color-text-main: #000000;
+  --color-text-muted: #1A1A1A;
+  --color-border: #000000;
+  --color-focus: #000000;
+}
+
+body.calm-mode {
+  --color-bg: #F6F5F0;
+  --color-surface: #FAFAF7;
+  --color-primary: #4A6653;
+  --color-primary-dark: #354D3C;
+  --color-primary-light: #EAECE9;
+  --color-secondary: #EAE7DF;
+  --color-accent: #7D5343;
+  --transition-smooth: none !important;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-hover: none;
+}
+
+body.calm-mode *,
+body.calm-mode *::before,
+body.calm-mode *::after {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-smooth: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
