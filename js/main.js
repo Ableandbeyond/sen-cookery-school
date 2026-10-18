@@ -23,37 +23,28 @@ const SITE_PRICING_DATA = {
     group: {
       title: 'Sensory Cooking Groups',
       lines: [
-        { text: '£20 / 60-min session', muted: false },
-        { text: '£85 for 5-week pass <strong>(Save £15)</strong>', muted: true }
+        { text: '£30 per session', muted: false },
+        { text: '£85 for a 5-week pass <strong>(save £15)</strong>', muted: true },
+        { text: '£130 for 6 sessions <strong>(1 session free)</strong>', muted: true }
       ],
-      dropdownLabel: 'Sensory Cooking Groups — £20 / 60-min session or £85 for 5-week pass (Save £15)',
-      helperHtml: '<strong>Sensory Cooking Groups:</strong> £20 / 60-min session or £85 for 5-week pass (Save £15). Small groups (4–6 learners max).',
+      dropdownLabel: 'Sensory Cooking Groups — £30 per session | £85 for 5-week pass (save £15) | £130 for 6 sessions (1 free)',
+      helperHtml: '<strong>Sensory Cooking Groups:</strong> £30 per session, £85 for a 5-week pass (save £15), or £130 for 6 sessions (where 1 session is free). Small online groups (4–6 learners max).',
       ctaText: 'Enquire About Group Sessions'
     },
     '1to1': {
       title: '1-to-1 Culinary Mentoring',
       lines: [
-        { text: 'Online: £50 / 60-min session', muted: false },
-        { text: 'In-Person Home Visit (London): £80 / 1.5-hr session', muted: false }
+        { text: '£50 per session', muted: false }
       ],
-      dropdownLabel: '1-to-1 Culinary Mentoring — Online: £50 / 60-min session | In-Person Home Visit (London): £80 / 1.5-hr session',
-      helperHtml: '<strong>1-to-1 Culinary Mentoring:</strong> Online: £50 / 60-min session | In-Person Home Visit (London): £80 / 1.5-hr session.',
+      dropdownLabel: '1-to-1 Culinary Mentoring (Online session) — £50 per session',
+      helperHtml: '<strong>1-to-1 Culinary Mentoring (Online session):</strong> £50 per session. Includes "Fridge-Friendly" cooking adapted around your fridge and cupboard, and students can give suggestions!',
       ctaText: 'Enquire About 1-to-1 Mentoring'
-    },
-    school: {
-      title: 'School & Specialist Workshops',
-      lines: [
-        { text: 'From £150 / 2-hr workshop', muted: false }
-      ],
-      dropdownLabel: 'School & Specialist Workshops — From £150 / 2-hr workshop',
-      helperHtml: '<strong>School &amp; Specialist Workshops:</strong> From £150 / 2-hr workshop with full risk assessment and dietary adaptation.',
-      ctaText: 'Request School Workshop Pack'
     },
     other: {
       title: 'General Enquiry & Advice',
       lines: [],
       dropdownLabel: 'General Enquiry & Advice',
-      helperHtml: '<strong>General Enquiry:</strong> Ask us any questions about our inclusive culinary sessions for children, young people, and adults.',
+      helperHtml: '<strong>General Enquiry:</strong> Ask us any questions about our inclusive online culinary sessions for children, young people, and adults.',
       ctaText: 'Send Enquiry'
     }
   }
@@ -61,7 +52,7 @@ const SITE_PRICING_DATA = {
 
 function renderPricingAndAvailability() {
   // 1. Render Programme Card Pricing Summaries
-  ['group', '1to1', 'school'].forEach(key => {
+  ['group', '1to1'].forEach(key => {
     const container = document.getElementById('pricing-card-' + key);
     const prog = SITE_PRICING_DATA.programmes[key];
     if (container && prog) {
@@ -105,19 +96,17 @@ function renderPricingAndAvailability() {
   }
 }
 
-// Item 13: Show time slots only for 1-to-1 and consultation; show School field only for schools
+// Show time slots only for 1-to-1 and consultation
 function updateDynamicFields(type) {
   const helperText = document.getElementById('form-helper-text');
   const slotDiv = document.getElementById('field-slot');
   const oneToOneDiv = document.getElementById('field-1to1');
-  const schoolDiv = document.getElementById('field-school');
   const submitBtn = document.getElementById('submit-btn');
 
-  if (!slotDiv || !oneToOneDiv || !schoolDiv) return;
+  if (!slotDiv || !oneToOneDiv) return;
 
   slotDiv.style.display = 'none';
   oneToOneDiv.style.display = 'none';
-  schoolDiv.style.display = 'none';
 
   const prog = SITE_PRICING_DATA.programmes[type] || SITE_PRICING_DATA.programmes.other;
   if (helperText) helperText.innerHTML = prog.helperHtml;
@@ -126,8 +115,6 @@ function updateDynamicFields(type) {
   if (type === '1to1' || type === 'consultation') {
     slotDiv.style.display = 'block';
     oneToOneDiv.style.display = 'block';
-  } else if (type === 'school') {
-    schoolDiv.style.display = 'block';
   }
 }
 
