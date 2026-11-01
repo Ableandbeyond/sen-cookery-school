@@ -138,6 +138,54 @@ a:hover { color: var(--color-accent); }
   color: var(--color-accent);
 }
 
+/* Able & Beyond Digital Ecosystem Bar */
+.ecosystem-bar {
+  background-color: var(--color-text-main);
+  color: #F8FAFC;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.ecosystem-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.ecosystem-links,
+.ecosystem-contact {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.ecosystem-link,
+.ecosystem-contact-link {
+  color: #E2E8F0;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.15rem 0.35rem;
+  border-radius: 6px;
+  transition: var(--transition-smooth);
+}
+.ecosystem-link:hover,
+.ecosystem-contact-link:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.12);
+  text-decoration: underline;
+}
+.ecosystem-link.active {
+  color: #FFFFFF;
+  background-color: var(--color-primary);
+  font-weight: 700;
+}
+.ecosystem-divider {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.8rem;
+}
+
 /* Sticky Header & Compact Navigation */
 header {
   background-color: rgba(252, 249, 242, 0.96);
@@ -162,16 +210,32 @@ body.calm-mode header {
   flex-wrap: wrap;
 }
 .logo {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--color-text-main);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
   min-height: 48px;
   text-decoration: none;
 }
 .logo:hover { color: var(--color-primary-dark); }
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.logo-brand {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+}
+.logo-sub {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.02em;
+}
 
 .nav-links {
   display: flex;
@@ -380,7 +444,7 @@ body.calm-mode header {
 }
 .reassurance-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: var(--space-md);
 }
 .reassurance-item {
@@ -434,7 +498,7 @@ section { padding: var(--space-xl) 0; position: relative; }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: var(--space-lg);
 }
 .card {
@@ -456,7 +520,7 @@ section { padding: var(--space-xl) 0; position: relative; }
 /* How It Works (3 Steps) */
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: var(--space-lg);
 }
 .step-item {
@@ -614,7 +678,7 @@ section { padding: var(--space-xl) 0; position: relative; }
 /* SEN & Sensory Approach Section */
 .approach-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 255px), 1fr));
   gap: var(--space-lg);
 }
 .approach-card {
@@ -645,7 +709,7 @@ section { padding: var(--space-xl) 0; position: relative; }
 /* Testimonials & Trust Bar (Item 9) */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: var(--space-lg);
 }
 .testimonial-card {
@@ -741,7 +805,7 @@ section { padding: var(--space-xl) 0; position: relative; }
 
 .kitchen-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: var(--space-md);
 }
 .kitchen-gallery-card {
@@ -854,7 +918,7 @@ section { padding: var(--space-xl) 0; position: relative; }
 /* Merged Our Team Section & Collapsible Story (Item 12) */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: var(--space-lg);
 }
 .founder-card {
@@ -1275,9 +1339,62 @@ body.text-size-xl .team-grid {
   }
 }
 
+/* Direct Contact Card in Enquiry Section */
+.direct-contact-card {
+  margin-top: var(--space-md);
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+.direct-contact-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-text-main);
+}
+.direct-contact-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.85rem;
+}
+.direct-contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.direct-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.6rem 0.95rem;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  word-break: break-word;
+}
+.direct-contact-btn:hover,
+.direct-contact-btn:focus-visible {
+  background: var(--color-primary-dark);
+  color: #FFFFFF;
+}
+.direct-contact-btn svg {
+  flex-shrink: 0;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
+  :root {
+    --header-offset: 148px;
+  }
   .hero { grid-template-columns: 1fr; text-align: center; padding: var(--space-lg) 0; }
+  .hero .format-badge { align-self: center; margin-left: auto; margin-right: auto; }
   .hero-ctas { justify-content: center; }
   .schedule-grid { grid-template-columns: 1fr; }
   .anna-story-content { grid-template-columns: 1fr; }
@@ -1287,8 +1404,37 @@ body.text-size-xl .team-grid {
     order: 3;
     width: 100%;
     justify-content: center;
-    gap: 0.65rem;
+    gap: 0.5rem 0.75rem;
     padding-top: 0.35rem;
     border-top: 1px solid var(--color-border);
+  }
+  .nav-links a {
+    min-height: 40px;
+    font-size: 0.92rem;
+  }
+  .ecosystem-bar-inner {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --header-offset: 165px;
+  }
+  section {
+    padding: var(--space-lg) 0;
+  }
+  .card,
+  .schedule-card,
+  .contact-form,
+  .newsletter-box {
+    padding: var(--space-md);
+  }
+  .program-content {
+    padding: var(--space-md);
+  }
+  .ecosystem-contact {
+    display: none;
   }
 }

@@ -314,7 +314,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Scroll Animations & Active Section Highlighting in Sticky Nav (Item 7)
+  // 4. Dynamic Sticky Header Offset, Anchor Aliases & Scroll Animations (Item 7)
+  const siteHeader = document.getElementById('site-header') || document.querySelector('header');
+  function syncHeaderOffset() {
+    if (!siteHeader) return;
+    const h = Math.ceil(siteHeader.getBoundingClientRect().height) + 16;
+    document.documentElement.style.setProperty('--header-offset', h + 'px');
+  }
+  syncHeaderOffset();
+  window.addEventListener('resize', syncHeaderOffset);
+  if (typeof ResizeObserver !== 'undefined' && siteHeader) {
+    new ResizeObserver(syncHeaderOffset).observe(siteHeader);
+  }
+
   const revealObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -322,9 +334,58 @@ document.addEventListener('DOMContentLoaded', () => {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.08 });
 
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Support common anchor aliases (#pricing -> #programs, #about -> #team)
+  const anchorAliases = {
+    '#pricing': '#programs',
+    '#about': '#team',
+    '#schedule': '#availability'
+  };
+
+  function resolveTargetElement(hash) {
+    if (!hash || !hash.startsWith('#')) return null;
+    const normalized = anchorAliases[hash.toLowerCase()] || hash;
+    try {
+      return document.querySelector(normalized);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function revealAndScrollToHash(hash, smooth = true) {
+    const target = resolveTargetElement(hash);
+    if (!target) return false;
+    // Immediately reveal the target section and its children so it never appears blank
+    target.classList.add('active');
+    target.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+    syncHeaderOffset();
+    target.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    return true;
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const href = anchor.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = resolveTargetElement(href);
+      if (target) {
+        e.preventDefault();
+        revealAndScrollToHash(href, true);
+        if (history.pushState) {
+          history.pushState(null, '', href);
+        }
+      }
+    });
+  });
+
+  if (window.location.hash) {
+    setTimeout(() => {
+      revealAndScrollToHash(window.location.hash, false);
+    }, 50);
+  }
 
   const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
   const sectionObserver = new IntersectionObserver((entries) => {
@@ -341,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
-  }, { rootMargin: '-25% 0px -60% 0px' });
+  }, { rootMargin: '-20% 0px -60% 0px' });
 
   document.querySelectorAll('main section[id]').forEach(sec => sectionObserver.observe(sec));
 
@@ -350,6 +411,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const slotInput = document.getElementById('group-slot');
+    const sensoryInput = document.getElementById('sensory-notes');
+    const messageInput = document.getElementById('message');
     const schoolInput = document.getElementById('school-name');
     const consentInput = document.getElementById('privacy-consent');
     const successBanner = document.getElementById('form-success-banner');
@@ -388,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Validate School Name if School tier is selected
-      const currentService = select ? select.value : '';
+      const currentService = select ? select.value : 'consultation';
       if (currentService === 'school' && schoolInput) {
         const schoolEmpty = schoolInput.value.trim().length < 2;
         setError(schoolInput, 'error-school', schoolEmpty);
@@ -413,8 +478,41 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Valid submission — show accessible success state
+      // Build pre-filled mailto & WhatsApp links for admin@ableandbeyond.support and 07936 433264
+      const progObj = SITE_PRICING_DATA.programmes[currentService] || SITE_PRICING_DATA.programmes.other;
+      const callerName = nameInput ? nameInput.value.trim() : '';
+      const callerPhone = phoneInput && phoneInput.value.trim() ? phoneInput.value.trim() : 'Not provided';
+      const slotText = (slotInput && (currentService === '1to1' || currentService === 'consultation') && slotInput.options[slotInput.selectedIndex])
+        ? slotInput.options[slotInput.selectedIndex].text
+        : 'N/A';
+      const sensoryText = sensoryInput && sensoryInput.value.trim() ? sensoryInput.value.trim() : 'None provided';
+      const notesText = messageInput && messageInput.value.trim() ? messageInput.value.trim() : 'None provided';
+
+      const subject = encodeURIComponent(`Cookery School Enquiry: ${progObj.title} — ${callerName}`);
+      const bodyLines = [
+        `Hello Anna & Lucas (Able & Beyond | Online Cookery School),`,
+        ``,
+        `I would like to enquire about: ${progObj.title}`,
+        `Name: ${callerName}`,
+        `Email: ${emailVal}`,
+        `Phone / WhatsApp: ${callerPhone}`,
+        `Preferred Slot: ${slotText}`,
+        `Learner Profile & Sensory Preferences: ${sensoryText}`,
+        `Additional Notes: ${notesText}`
+      ];
+      const mailtoHref = `mailto:admin@ableandbeyond.support?subject=${subject}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+      const waText = encodeURIComponent(`Hi Able & Beyond Cookery School! I'm ${callerName} (${emailVal}) enquiring about: ${progObj.title}. Preferred slot: ${slotText}.`);
+      const waHref = `https://wa.me/447936433264?text=${waText}`;
+
+      // Valid submission — show accessible success state with direct email & WhatsApp action links
       if (successBanner) {
+        successBanner.innerHTML = `
+          <div>Thank you, ${callerName}! Your enquiry details are ready—we reply within 24 hours.</div>
+          <div style="margin-top: 0.65rem; font-weight: 600; font-size: 0.95rem; display: flex; flex-wrap: wrap; gap: 0.6rem;">
+            <a href="${mailtoHref}" class="btn btn-primary" style="min-height: 40px; padding: 0.45rem 1rem; font-size: 0.9rem;">✉ Send via Email (admin@ableandbeyond.support)</a>
+            <a href="${waHref}" target="_blank" rel="noopener" class="btn btn-secondary" style="min-height: 40px; padding: 0.45rem 1rem; font-size: 0.9rem;">💬 Send via WhatsApp (07936 433264)</a>
+          </div>
+        `;
         successBanner.classList.add('visible');
         successBanner.focus();
       }
@@ -431,8 +529,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const emailEl = document.getElementById('newsletter-email');
+      const subEmail = emailEl ? emailEl.value.trim() : '';
       const msg = document.getElementById('newsletter-feedback');
       if (msg) {
+        const mailtoSub = `mailto:admin@ableandbeyond.support?subject=${encodeURIComponent('Monthly Step-by-Step Recipe Sheet Subscription')}&body=${encodeURIComponent('Please add ' + subEmail + ' to the Able & Beyond Online Cookery School monthly step-by-step recipe sheets.')}`;
+        msg.innerHTML = `Thank you! You are subscribed to our monthly recipe sheets. <a href="${mailtoSub}" style="color: var(--color-primary-dark); font-weight: 800;">Click here to confirm via email (admin@ableandbeyond.support)</a>.`;
         msg.style.display = 'block';
       }
       newsletterForm.reset();
